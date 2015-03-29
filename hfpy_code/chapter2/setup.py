@@ -9,7 +9,7 @@ from distutils.core import setup
 
 setup(
     name='nester',
-    version='1.0.0',
+    version='1.1.0',
     author='arthor',
     author_email="arthor.cui@gmail.com",
     url='https://github.com/ArthorCui/PythonTrip/',
