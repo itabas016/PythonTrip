@@ -1,21 +1,22 @@
-def convert_to_list(input_string):
-    output_list = list()
-    for s in input_string:
-        output_list.append(s)
-    return output_list
+def convert(input_string):
+    if len(input_string) > 0:
+        output_list = list()
+        for s in input_string:
+            output_list.append(s)
+        return output_list
 
 
 def find_index(char, list):
     if len(char) > 0:
-		try:
-			return list.index(char)
-		except:
-				return -1
+        try:
+            return list.index(char)
+        except:
+            return -1
 
 
 def move_string_by_increment(input_string, list, increment):
+    output_string = ''
     if len(input_string) > 0:
-        output_string = ""
         for i in input_string:
             current_char = i
             old_index = find_index(current_char, list)
@@ -37,10 +38,11 @@ increment = 2
 
 print move_string_by_increment(input_string, list, increment)
 
-
 import string
 
-table = string.maketrans('abcdefghijklmnopqrstuvwxyz','cdefghijklmnopqrstuvwxyzab')
-output_string = string.translate(input_string,table)
+table = string.maketrans('abcdefghigklmnopqrstuvwxyz', 'cdefghigklmnopqrstuvwxyzab')
+output_string = string.translate(input_string, table)
 
-print output_string
+print(output_string)
+
+print(string.translate('map', table))
