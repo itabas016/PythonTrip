@@ -2,18 +2,35 @@ import os
 
 os.getcwd()
 
-if os.path.exists('../sketch.txt'):
-    data = open('../sketch.txt')
-    data.seek(0)
+man = []
+other = []
+
+try:
+    data = open('sketch.txt')
 
     for each_line in data:
         try:
-            if not each_line.find(':') == -1:
-                (role, line_spoken) = each_line.split(':', 1)
-                print(role+' said: '+line_spoken)
-        except:
-            # print('throw exception handle read each line data.')
+            (role, line_spoken) = each_line.split(':', 1)
+            line_spoken = line_spoken.strip()
+            if role == 'Man':
+                man.append(line_spoken)
+            elif role == 'Other Man':
+                other.append(line_spoken)
+        except ValueError:
             pass
+
     data.close()
-else:
-    print('The data file is missing.')
+except IOError:
+    print('The datafile is missing!')
+
+try:
+    man_file = open('man_data.txt', 'w')
+    other_file = open('other_data.txt', 'w')
+
+    print(man, file=man_file)
+    print(other, file=other_file)
+
+    man_file.close()
+    other_file.close()
+except IOError:
+    print('File error.')
