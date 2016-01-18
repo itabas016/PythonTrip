@@ -1,4 +1,5 @@
 import os
+import pickle
 
 os.getcwd()
 
@@ -24,13 +25,12 @@ except IOError:
     print('The datafile is missing!')
 
 try:
-    man_file = open('man_data.txt', 'w')
-    other_file = open('other_data.txt', 'w')
-
+	with open('man_data.txt', 'w') as man_file, open('other_data.txt', 'w') as other_file
+		pickle.dump(man, file=man_file)
+		pickle.dump(other, file=other_file)
     print(man, file=man_file)
     print(other, file=other_file)
-
-    man_file.close()
-    other_file.close()
-except IOError:
-    print('File error.')
+except IOError as err:
+    print('File error: ' + str(err))
+except pickle.PickleError as perr:
+    print('Pickling error: ' + str(perr))
