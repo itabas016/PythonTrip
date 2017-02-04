@@ -23,6 +23,15 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="app_integration.py" />
+    <Compile Include="WeChat\cloudMusic.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WeChat\smartWish.py">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="WeChat\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
