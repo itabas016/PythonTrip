@@ -23,6 +23,9 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Apple\push.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Database\ibsClient.py">
       <SubType>Code</SubType>
     </Compile>
@@ -44,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Database\" />
+    <Folder Include="Apple\" />
     <Folder Include="Tools\" />
     <Folder Include="WeChat\" />
   </ItemGroup>
