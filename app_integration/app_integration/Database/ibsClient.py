@@ -1,4 +1,4 @@
-# coding: utf-8
+# coding=utf-8
 import cx_Oracle
 
 CONNSTRING = 'system/S$cur1ty1@icdb'

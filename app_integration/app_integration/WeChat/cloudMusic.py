@@ -1,14 +1,14 @@
-#coding: utf-8
+#coding=utf-8
 
 import os, itchat
 from NetEaseMusicApi import interact_select_song
 
 
 HELP_MSG = u'''\
-»¶Ó­Ê¹ÓÃÎ¢ĞÅÍøÒ×ÔÆÒôÀÖ
-°ïÖú£º ÏÔÊ¾°ïÖú
-¹Ø±Õ£º ¹Ø±Õ¸èÇú
-¸èÃû£º °´ÕÕÒıµ¼²¥·ÅÒôÀÖ\
+æ¬¢è¿ä½¿ç”¨å¾®ä¿¡ç½‘æ˜“äº‘éŸ³ä¹
+å¸®åŠ©ï¼š æ˜¾ç¤ºå¸®åŠ©
+å…³é—­ï¼š å…³é—­æ­Œæ›²
+æ­Œåï¼š æŒ‰ç…§å¼•å¯¼æ’­æ”¾éŸ³ä¹\
 '''
 
 with open('stop.mp3', 'w') as f: pass
@@ -19,10 +19,10 @@ def close_music():
 @itchat.msg_register(itchat.content.TEXT)
 def music_player(msg):
     if msg['ToUserName'] != 'filehelper': return
-    if msg['Text'] ==u'¹Ø±Õ':
+    if msg['Text'] ==u'å…³é—­':
         close_music()
-        itchat.send(u'ÒôÀÖÒÑ¹Ø±Õ', 'filehelper')
-    if msg['Text'] == u'°ïÖú':
+        itchat.send(u'éŸ³ä¹å·²å…³é—­', 'filehelper')
+    if msg['Text'] == u'å¸®åŠ©':
         itchat.send(HELP_MSG, 'filehelper')
     else:
         itchat.send(interact_select_song(msg['Text']), 'filehelper')

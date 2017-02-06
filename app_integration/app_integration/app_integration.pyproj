@@ -5,7 +5,8 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>3836431d-ba72-4548-ad86-d6f6844ff863</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>app_integration.py</StartupFile>
+    <StartupFile>
+    </StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -22,8 +23,19 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="app_integration.py" />
+    <Compile Include="Database\ibsClient.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tools\flaskQR.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WeChat\checkFriend.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="WeChat\cloudMusic.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WeChat\robot.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="WeChat\smartWish.py">
@@ -31,6 +43,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Database\" />
+    <Folder Include="Tools\" />
     <Folder Include="WeChat\" />
   </ItemGroup>
   <PropertyGroup>

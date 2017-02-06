@@ -1,21 +1,21 @@
-# coding: utf-8
+#coding=utf-8
 
 import itchat
 
 
 CHATROOM_NAME = 'friend'
 CHATROOM = None
-HELP_MSG = u'''\ºÃÓÑ×´Ì¬¼à²â
-* ·¢ËÍÃûÆ¬½«»á·µ»ØºÃÓÑ×´Ì¬
-* ÇëÈ·ÓĞÃûÎª%sµÄÎ´Ê¹ÓÃµÄÈºÁÄ
-* ²¢½«¸ÃÈºÁÄ±£´æµ½Í¨Ñ¶Â¼
-* µ÷ÓÃÆµÂÊ´æÔÚÒ»¶¨ÏŞÖÆ\
+HELP_MSG = u'''\å¥½å‹çŠ¶æ€ç›‘æµ‹
+* å‘é€åç‰‡å°†ä¼šè¿”å›å¥½å‹çŠ¶æ€
+* è¯·ç¡®æœ‰åä¸º%sçš„æœªä½¿ç”¨çš„ç¾¤èŠ
+* å¹¶å°†è¯¥ç¾¤èŠä¿å­˜åˆ°é€šè®¯å½•
+* è°ƒç”¨é¢‘ç‡å­˜åœ¨ä¸€å®šé™åˆ¶\
 ''' % CHATROOM_NAME
 CHATROOM_MSG = u'''\
-ÎŞ·¨×Ô¶¯´´½¨ÈºÁÄ£¬ÇëÊÖ¶¯´´½¨
-È·±£ÈºÁÄÃû³ÆÎª%s
-Çë²»ÒªÊ¹ÓÃÒÑ¾­Ê¹ÓÃ¹ıµÄÈºÁÄ
-´´½¨ºóÇë½«ÈºÁÄ±£´æµ½Í¨Ñ¶Â¼\
+æ— æ³•è‡ªåŠ¨åˆ›å»ºç¾¤èŠï¼Œè¯·æ‰‹åŠ¨åˆ›å»º
+ç¡®ä¿ç¾¤èŠåç§°ä¸º%s
+è¯·ä¸è¦ä½¿ç”¨å·²ç»ä½¿ç”¨è¿‡çš„ç¾¤èŠ
+åˆ›å»ºåè¯·å°†ç¾¤èŠä¿å­˜åˆ°é€šè®¯å½•\
 ''' % CHATROOM_NAME
 
 def get_chatroom():
@@ -37,9 +37,9 @@ def get_chatroom():
 def get_friends_status(friend):
     ownAccount = itchat.get_friends(update=True)[0]
     if friend['UserName'] == ownAccount['UserName']:
-        return u'¼ì²âµ½±¾ÈËÕËºÅ¡£'
+        return u'æ£€æµ‹åˆ°æœ¬äººè´¦å·ã€‚'
     elif itchat.search_friends(userName=friend['UserName']) is None:
-        return u'¸ÃÓÃ»§²»ÔÚÄãµÄºÃÓÑÁĞ±íÖĞ¡£'
+        return u'è¯¥ç”¨æˆ·ä¸åœ¨ä½ çš„å¥½å‹åˆ—è¡¨ä¸­ã€‚'
     else:
         chatroom = CHATROOM or get_chatroom()
         if chatroom is None: return CHATROOM_MSG
@@ -47,9 +47,9 @@ def get_friends_status(friend):
         if r['BaseResponse']['ErrMsg'] == '':
             status = r['MemberList'][0]['MemberStatus']
             itchat.delete_member_from_chatroom(chatroom['UserName'],[friend])
-            return { 3: u'¸ÃºÃÓÑÒÑ¾­½«Äã¼ÓÈëºÚÃûµ¥¡£', 4: u'¸ÃºÃÓÑÒÑ¾­½«ÄãÉ¾³ı¡£', }.get(status, u'¸ÃºÃÓÑÈÔ¾ÉÓëÄãÊÇºÃÓÑ¹ØÏµ¡£')
+            return { 3: u'è¯¥å¥½å‹å·²ç»å°†ä½ åŠ å…¥é»‘åå•ã€‚', 4: u'è¯¥å¥½å‹å·²ç»å°†ä½ åˆ é™¤ã€‚', }.get(status, u'è¯¥å¥½å‹ä»æ—§ä¸ä½ æ˜¯å¥½å‹å…³ç³»ã€‚')
         else:
-            return u'ÎŞ·¨»ñÈ¡ºÃÓÑ×´Ì¬£¬Ô¤¼ÆÒÑ¾­´ïµ½½Ó¿Úµ÷ÓÃÏŞÖÆ¡£'
+            return u'æ— æ³•è·å–å¥½å‹çŠ¶æ€ï¼Œé¢„è®¡å·²ç»è¾¾åˆ°æ¥å£è°ƒç”¨é™åˆ¶ã€‚'
 
 
 @itchat.msg_register(itchat.content.CARD)
