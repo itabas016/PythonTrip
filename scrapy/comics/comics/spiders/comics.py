@@ -44,7 +44,7 @@ class Comics(scrapy.Spider):
         comics_url_list = []
         for tag_a in com_a_list:
             url = SITE_NAME + tag_a['href']
-            comics_url_lisst.append(url)
+            comics_url_list.append(url)
 
 
         print('\n>>>>>>>>>>>>>>>>>>> current page comics list <<<<<<<<<<<<<<<<<<<<')
