@@ -39,3 +39,15 @@ def str2int_s(s):
     return lambda x, y: x*10 +y, map(char2num, s)
 
 print(str2int_s('1234'))
+
+
+def prod(L):
+    return reduce(lambda x, y: x * y, map(lambda z: z, L))
+
+print('3*5*7*9 =', prod([3,5,7,9]))
+
+
+def str2float(s):
+    return reduce(lambda x, y: x * 10 + y, map(char2num, s.split('.')[0])) + reduce(lambda x, y: x * 10 + y, map(char2num, s.split('.')[1]))/(10**len(s.split('.')[1]))
+
+print('str2float(\'123.456\') =', str2float('123.456'))
