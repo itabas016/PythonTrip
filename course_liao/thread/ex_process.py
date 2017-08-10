@@ -16,4 +16,8 @@ if __name__ == '__main__':
     p.join()
     print('Child process end.')
 
+import subprocess
 
+print('$ nslookup www.python.org')
+r = subprocess.call(['nslookup', 'www.python.org'])
+print('Exit code:', r)
