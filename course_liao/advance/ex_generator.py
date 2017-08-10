@@ -48,4 +48,14 @@ for g in o:
 
 # print a graph for triangles
 def triangles():
-    
+    L = [1]
+    i = 0
+
+    while i<6:
+        i = i+1
+        yield print(L)
+        L.append(1)
+        L = [L[j]+L[j-1] for j in range(0,len(L))]
+
+for x in triangles():
+    pass
