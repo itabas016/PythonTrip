@@ -1,16 +1,25 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-import socket, threading, time
+import socket, threading, time, sys, os
 
-s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+HOST = '127.0.0.1'
+PORT = 12345
+BUFFER_SIZE = 1024
+UTF8 = 'utf-8'
+COMMAND_EXIT = 'exit'
 
-s.connect(('127.0.0.1', 12345))
+c = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+c.setsockopt(socket.SOL_SOCKET, socket.SO_KEEPALIVE, 1)
+c.connect((HOST, PORT))
 
-print(s.recv(1024).decode('utf-8'))
+while True:
+    print('Client process Id: %s' % os.getpid())
+    print(c.recv(BUFFER_SIZE).decode(UTF8))
+    # c.send((sys.argv).encode())
+    c.send(b'Hello server'.encode())
+    print(c.recv(BUFFER_SIZE).decode(UTF8))
+    time.sleep(5)
 
-for data in input_list:
-    s.send(data)
-    print(s.recv(1024).decode('utf-8'))
-s.send(b'exit')
-s.close()
+c.send(b'exit')
+c.close()
