@@ -3,7 +3,7 @@
 
 import mysql.connector
 
-conn = mysql.connector.connect(user='root', password='password', database='test')
+conn = mysql.connector.connect(user='test', password='password', database='test')
 cursor = conn.cursor()
 cursor.execute('create table tmp_user (id integer primary key, name varchar(20))')
 cursor.execute('insert into tmp_user (id, name) values (s%, %s)', [1, 'itabas'])
