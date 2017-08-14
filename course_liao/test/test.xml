@@ -1,0 +1,953 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="D:\Documents\DISH\RegressionTestSuite_New.nunit" total="37" errors="37" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2017-08-05" time="10:45:25">
+  <environment nunit-version="2.6.4.14350" clr-version="2.0.50727.5485" os-version="Microsoft Windows NT 6.1.7601 Service Pack 1" platform="Win32NT" cwd="C:\Program Files (x86)\TestDriven.NET 4\NUnit\2.6" machine-name="HCNLT085" user="cuir" user-domain="CN" />
+  <culture-info current-culture="en-US" current-uiculture="en-US" />
+  <test-suite type="Test Project" name="D:\Documents\DISH\RegressionTestSuite_New.nunit" executed="True" result="Failure" success="False" time="174.305" asserts="0">
+    <results>
+      <test-suite type="Assembly" name="D:\Documents\DISH\..\..\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\RegressionTestSuite_New\bin\Debug\RegressionTestSuite_New.dll" executed="True" result="Failure" success="False" time="4261.688" asserts="0">
+        <properties>
+          <property name="APARTMENT_STATE" value="STA" />
+        </properties>
+        <results>
+          <test-suite type="Namespace" name="RegressionTestSuite_New" executed="True" result="Failure" success="False" time="4261.615" asserts="0">
+            <results>
+              <test-suite type="Namespace" name="TestCases" executed="True" result="Failure" success="False" time="4261.606" asserts="0">
+                <results>
+                  <test-suite type="Namespace" name="CSR" executed="True" result="Failure" success="False" time="4261.591" asserts="0">
+                    <results>
+                      <test-suite type="TestFixture" name="I26502_001" executed="True" result="Failure" success="False" time="140.098" asserts="0">
+                        <results>
+                          <test-case name="RegressionTestSuite_New.TestCases.CSR.I26502_001.I26502_001_OPPV_sales_to_customers_whose_total_balance_is_below_the_max_configured_balance" executed="True" result="Error" success="False" time="139.523" asserts="0">
+                            <categories>
+                              <category name="CSRModule.ProductManagement.PPVandVOD" />
+                            </categories>
+                            <failure>
+                              <message><![CDATA[Oracle.DataAccess.Client.OracleException : ORA-12557: TNS:protocol adapter not loadable]]></message>
+                              <stack-trace><![CDATA[at Oracle.DataAccess.Client.OracleException.HandleErrorHelper(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, OpoSqlValCtx* pOpoSqlValCtx, Object src, String procedure, Boolean bCheck, Int32 isRecoverable)
+at Oracle.DataAccess.Client.OracleException.HandleError(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, Object src)
+at Oracle.DataAccess.Client.OracleConnection.Open()
+at QAutomate.Framework.Helpers.Config.Build_connection_string(String dns, String appModule) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\Config.cs:line 268
+at QAutomate.Framework.Helpers.Config.get_ConnectionString() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\Config.cs:line 81
+at QAutomate.Framework.Helpers.OracleDataAccess.Get_connection() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\OracleDataAccess.cs:line 70
+at QAutomate.Framework.Helpers.OracleDataAccess.ExecuteReader(String sql, HandleDataReader dataReaderHandler, List`1 parameters) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\OracleDataAccess.cs:line 54
+at QAutomate.Framework.Helpers.DeviceHelper.Get_stock_device_serial_number_by_model(String model, String stockHandler, String stockDescription) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\DeviceHelper.cs:line 382
+at QAutomate.Framework.Web.Pages.EnterDeviceInformationSpoke.Enter_serial_number_for_all_devices(String deviceFromStockHandler, String stockDescription) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Web\Pages\CSRModule\Product Management\Devices\EnterDeviceInformationSpoke.cs:line 146
+at QAutomate.Framework.Web.Pages.EnterDeviceInformationSpoke.Input_data(EnterDeviceInformationData data) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Web\Pages\CSRModule\Product Management\Devices\EnterDeviceInformationSpoke.cs:line 359
+at QAutomate.CommonSteps.CaptureSteps.Capture_products_with_device_present_and_without_wo(PageDataList pageDataList) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.CommonSteps\CaptureSteps.cs:line 248
+at RegressionTestSuite_New.TestCases.CSR.PPV_VODTestBase.Capture_TV_Smartcard_with_device_present_without_wo() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\RegressionTestSuite_New\TestCases\CSR\Product Management\PPV&VOD\PPV_VODTestBase.cs:line 787
+at RegressionTestSuite_New.TestCases.CSR.I26502_001.I26502_001_OPPV_sales_to_customers_whose_total_balance_is_below_the_max_configured_balance() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\RegressionTestSuite_New\TestCases\CSR\Product Management\PPV&VOD\I26502_001_OPPV_sales_to_customers_whose_total_balance_is_below_the_max_configured_balance.cs:line 47
+]]></stack-trace>
+                            </failure>
+                          </test-case>
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="I26502_002" executed="True" result="Failure" success="False" time="95.180" asserts="0">
+                        <results>
+                          <test-case name="RegressionTestSuite_New.TestCases.CSR.I26502_002.I26502_002_OPPV_can_not_be_sales_to_customers_whose_total_balance_is_more_than_the_max_configured_balance" executed="True" result="Error" success="False" time="95.177" asserts="0">
+                            <categories>
+                              <category name="CSRModule.ProductManagement.PPVandVOD" />
+                            </categories>
+                            <failure>
+                              <message><![CDATA[Oracle.DataAccess.Client.OracleException : ORA-12557: TNS:protocol adapter not loadable]]></message>
+                              <stack-trace><![CDATA[at Oracle.DataAccess.Client.OracleException.HandleErrorHelper(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, OpoSqlValCtx* pOpoSqlValCtx, Object src, String procedure, Boolean bCheck, Int32 isRecoverable)
+at Oracle.DataAccess.Client.OracleException.HandleError(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, Object src)
+at Oracle.DataAccess.Client.OracleConnection.Open()
+at QAutomate.Framework.Helpers.Config.Build_connection_string(String dns, String appModule) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\Config.cs:line 268
+at QAutomate.Framework.Helpers.Config.get_ConnectionString() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\Config.cs:line 81
+at QAutomate.Framework.Helpers.OracleDataAccess.Get_connection() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\OracleDataAccess.cs:line 70
+at QAutomate.Framework.Helpers.OracleDataAccess.ExecuteReader(String sql, HandleDataReader dataReaderHandler, List`1 parameters) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\OracleDataAccess.cs:line 54
+at QAutomate.Framework.Helpers.DeviceHelper.Get_stock_device_serial_number_by_model(String model, String stockHandler, String stockDescription) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\DeviceHelper.cs:line 382
+at QAutomate.Framework.Web.Pages.EnterDeviceInformationSpoke.Enter_serial_number_for_all_devices(String deviceFromStockHandler, String stockDescription) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Web\Pages\CSRModule\Product Management\Devices\EnterDeviceInformationSpoke.cs:line 146
+at QAutomate.Framework.Web.Pages.EnterDeviceInformationSpoke.Input_data(EnterDeviceInformationData data) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Web\Pages\CSRModule\Product Management\Devices\EnterDeviceInformationSpoke.cs:line 359
+at QAutomate.CommonSteps.CaptureSteps.Capture_products_with_device_present_and_without_wo(PageDataList pageDataList) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.CommonSteps\CaptureSteps.cs:line 248
+at RegressionTestSuite_New.TestCases.CSR.PPV_VODTestBase.Capture_TV_Smartcard_with_device_present_without_wo() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\RegressionTestSuite_New\TestCases\CSR\Product Management\PPV&VOD\PPV_VODTestBase.cs:line 787
+at RegressionTestSuite_New.TestCases.CSR.I26502_002.I26502_002_OPPV_can_not_be_sales_to_customers_whose_total_balance_is_more_than_the_max_configured_balance() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\RegressionTestSuite_New\TestCases\CSR\Product Management\PPV&VOD\I26502_002_OPPV_can_not_be_sales_to_customers_whose_total_balance_is_more_than_the_max_configured_balance.cs:line 47
+]]></stack-trace>
+                            </failure>
+                          </test-case>
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="I26502_003" executed="True" result="Failure" success="False" time="95.965" asserts="0">
+                        <results>
+                          <test-case name="RegressionTestSuite_New.TestCases.CSR.I26502_003.I26502_003_OPPV_sales_to_customers_whoseoverdue_is_below_the_max_configured_overdue" executed="True" result="Error" success="False" time="95.964" asserts="0">
+                            <categories>
+                              <category name="CSRModule.ProductManagement.PPVandVOD" />
+                            </categories>
+                            <failure>
+                              <message><![CDATA[Oracle.DataAccess.Client.OracleException : ORA-12557: TNS:protocol adapter not loadable]]></message>
+                              <stack-trace><![CDATA[at Oracle.DataAccess.Client.OracleException.HandleErrorHelper(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, OpoSqlValCtx* pOpoSqlValCtx, Object src, String procedure, Boolean bCheck, Int32 isRecoverable)
+at Oracle.DataAccess.Client.OracleException.HandleError(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, Object src)
+at Oracle.DataAccess.Client.OracleConnection.Open()
+at QAutomate.Framework.Helpers.Config.Build_connection_string(String dns, String appModule) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\Config.cs:line 268
+at QAutomate.Framework.Helpers.Config.get_ConnectionString() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\Config.cs:line 81
+at QAutomate.Framework.Helpers.OracleDataAccess.Get_connection() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\OracleDataAccess.cs:line 70
+at QAutomate.Framework.Helpers.OracleDataAccess.ExecuteReader(String sql, HandleDataReader dataReaderHandler, List`1 parameters) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\OracleDataAccess.cs:line 54
+at QAutomate.Framework.Helpers.DeviceHelper.Get_stock_device_serial_number_by_model(String model, String stockHandler, String stockDescription) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\DeviceHelper.cs:line 382
+at QAutomate.Framework.Web.Pages.EnterDeviceInformationSpoke.Enter_serial_number_for_all_devices(String deviceFromStockHandler, String stockDescription) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Web\Pages\CSRModule\Product Management\Devices\EnterDeviceInformationSpoke.cs:line 146
+at QAutomate.Framework.Web.Pages.EnterDeviceInformationSpoke.Input_data(EnterDeviceInformationData data) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Web\Pages\CSRModule\Product Management\Devices\EnterDeviceInformationSpoke.cs:line 359
+at QAutomate.CommonSteps.CaptureSteps.Capture_products_with_device_present_and_without_wo(PageDataList pageDataList) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.CommonSteps\CaptureSteps.cs:line 248
+at RegressionTestSuite_New.TestCases.CSR.PPV_VODTestBase.Capture_TV_Smartcard_with_device_present_without_wo() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\RegressionTestSuite_New\TestCases\CSR\Product Management\PPV&VOD\PPV_VODTestBase.cs:line 787
+at RegressionTestSuite_New.TestCases.CSR.I26502_003.I26502_003_OPPV_sales_to_customers_whoseoverdue_is_below_the_max_configured_overdue() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\RegressionTestSuite_New\TestCases\CSR\Product Management\PPV&VOD\I26502_003_OPPV_sales_to_customers_whoseoverdue_is_below_the_max_configured_overdue.cs:line 47
+]]></stack-trace>
+                            </failure>
+                          </test-case>
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="I26502_004" executed="True" result="Failure" success="False" time="94.330" asserts="0">
+                        <results>
+                          <test-case name="RegressionTestSuite_New.TestCases.CSR.I26502_004.I26502_004_OPPV_can_not_be_sales_to_customers_whoseoverdue_is_more_than_the_max_configured_overdue" executed="True" result="Error" success="False" time="94.329" asserts="0">
+                            <categories>
+                              <category name="CSRModule.ProductManagement.PPVandVOD" />
+                            </categories>
+                            <failure>
+                              <message><![CDATA[Oracle.DataAccess.Client.OracleException : ORA-12557: TNS:protocol adapter not loadable]]></message>
+                              <stack-trace><![CDATA[at Oracle.DataAccess.Client.OracleException.HandleErrorHelper(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, OpoSqlValCtx* pOpoSqlValCtx, Object src, String procedure, Boolean bCheck, Int32 isRecoverable)
+at Oracle.DataAccess.Client.OracleException.HandleError(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, Object src)
+at Oracle.DataAccess.Client.OracleConnection.Open()
+at QAutomate.Framework.Helpers.Config.Build_connection_string(String dns, String appModule) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\Config.cs:line 268
+at QAutomate.Framework.Helpers.Config.get_ConnectionString() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\Config.cs:line 81
+at QAutomate.Framework.Helpers.OracleDataAccess.Get_connection() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\OracleDataAccess.cs:line 70
+at QAutomate.Framework.Helpers.OracleDataAccess.ExecuteReader(String sql, HandleDataReader dataReaderHandler, List`1 parameters) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\OracleDataAccess.cs:line 54
+at QAutomate.Framework.Helpers.DeviceHelper.Get_stock_device_serial_number_by_model(String model, String stockHandler, String stockDescription) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\DeviceHelper.cs:line 382
+at QAutomate.Framework.Web.Pages.EnterDeviceInformationSpoke.Enter_serial_number_for_all_devices(String deviceFromStockHandler, String stockDescription) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Web\Pages\CSRModule\Product Management\Devices\EnterDeviceInformationSpoke.cs:line 146
+at QAutomate.Framework.Web.Pages.EnterDeviceInformationSpoke.Input_data(EnterDeviceInformationData data) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Web\Pages\CSRModule\Product Management\Devices\EnterDeviceInformationSpoke.cs:line 359
+at QAutomate.CommonSteps.CaptureSteps.Capture_products_with_device_present_and_without_wo(PageDataList pageDataList) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.CommonSteps\CaptureSteps.cs:line 248
+at RegressionTestSuite_New.TestCases.CSR.PPV_VODTestBase.Capture_TV_Smartcard_with_device_present_without_wo() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\RegressionTestSuite_New\TestCases\CSR\Product Management\PPV&VOD\PPV_VODTestBase.cs:line 787
+at RegressionTestSuite_New.TestCases.CSR.I26502_004.I26502_004_OPPV_can_not_be_sales_to_customers_whoseoverdue_is_more_than_the_max_configured_overdue() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\RegressionTestSuite_New\TestCases\CSR\Product Management\PPV&VOD\I26502_004_OPPV_can_not_be_sales_to_customers_whoseoverdue_is_more_than_the_max_configured_overdue.cs:line 47
+]]></stack-trace>
+                            </failure>
+                          </test-case>
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="i28177_001" executed="True" result="Failure" success="False" time="77.081" asserts="0">
+                        <results>
+                          <test-case name="RegressionTestSuite_New.TestCases.CSR.i28177_001.i28177_001_PPV_Disc_Price_Tier_Cond" executed="True" result="Error" success="False" time="77.080" asserts="0">
+                            <categories>
+                              <category name="CSRModule.ProductManagement.PPVandVOD" />
+                            </categories>
+                            <failure>
+                              <message><![CDATA[Oracle.DataAccess.Client.OracleException : ORA-12557: TNS:protocol adapter not loadable]]></message>
+                              <stack-trace><![CDATA[at Oracle.DataAccess.Client.OracleException.HandleErrorHelper(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, OpoSqlValCtx* pOpoSqlValCtx, Object src, String procedure, Boolean bCheck, Int32 isRecoverable)
+at Oracle.DataAccess.Client.OracleException.HandleError(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, Object src)
+at Oracle.DataAccess.Client.OracleConnection.Open()
+at QAutomate.Framework.Helpers.Config.Build_connection_string(String dns, String appModule) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\Config.cs:line 268
+at QAutomate.Framework.Helpers.Config.get_ConnectionString() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\Config.cs:line 81
+at QAutomate.Framework.Helpers.OracleDataAccess.Get_connection() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\OracleDataAccess.cs:line 70
+at QAutomate.Framework.Helpers.OracleDataAccess.ExecuteReader(String sql, HandleDataReader dataReaderHandler, List`1 parameters) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\OracleDataAccess.cs:line 54
+at QAutomate.Framework.Helpers.DeviceHelper.Get_stock_device_serial_number_by_model(String model, String stockHandler, String stockDescription) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\DeviceHelper.cs:line 382
+at QAutomate.Framework.Web.Pages.EnterDeviceInformationSpoke.Enter_serial_number_for_all_devices(String deviceFromStockHandler, String stockDescription) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Web\Pages\CSRModule\Product Management\Devices\EnterDeviceInformationSpoke.cs:line 146
+at QAutomate.Framework.Web.Pages.EnterDeviceInformationSpoke.Input_data(EnterDeviceInformationData data) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Web\Pages\CSRModule\Product Management\Devices\EnterDeviceInformationSpoke.cs:line 359
+at QAutomate.CommonSteps.CaptureSteps.Capture_products_with_device_present_and_without_wo(PageDataList pageDataList) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.CommonSteps\CaptureSteps.cs:line 248
+at RegressionTestSuite_New.TestCases.CSR.i28177_001.Capture_TV_Starter_Gold_with_device_present_without_wo() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\RegressionTestSuite_New\TestCases\CSR\Product Management\PPV&VOD\i28177_001_PPV_Disc_Price_Tier_Cond.cs:line 135
+at RegressionTestSuite_New.TestCases.CSR.i28177_001.i28177_001_PPV_Disc_Price_Tier_Cond() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\RegressionTestSuite_New\TestCases\CSR\Product Management\PPV&VOD\i28177_001_PPV_Disc_Price_Tier_Cond.cs:line 37
+]]></stack-trace>
+                            </failure>
+                          </test-case>
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="i29017_001" executed="True" result="Failure" success="False" time="59.052" asserts="0">
+                        <results>
+                          <test-case name="RegressionTestSuite_New.TestCases.CSR.i29017_001.i29017_001_Get_EventSchedule_from_provisioning_by_action_5229" executed="True" result="Error" success="False" time="59.051" asserts="0">
+                            <categories>
+                              <category name="ConfigurationModule.OrderableEvents.Schedules" />
+                            </categories>
+                            <failure>
+                              <message><![CDATA[Oracle.DataAccess.Client.OracleException : ORA-12557: TNS:protocol adapter not loadable]]></message>
+                              <stack-trace><![CDATA[at Oracle.DataAccess.Client.OracleException.HandleErrorHelper(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, OpoSqlValCtx* pOpoSqlValCtx, Object src, String procedure, Boolean bCheck, Int32 isRecoverable)
+at Oracle.DataAccess.Client.OracleException.HandleError(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, Object src)
+at Oracle.DataAccess.Client.OracleConnection.Open()
+at QAutomate.Framework.Helpers.Config.Build_connection_string(String dns, String appModule) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\Config.cs:line 268
+at QAutomate.Framework.Helpers.Config.get_ConnectionString() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\Config.cs:line 81
+at QAutomate.Framework.Helpers.OracleDataAccess.Get_connection() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\OracleDataAccess.cs:line 70
+at QAutomate.Framework.Helpers.OracleDataAccess.ExecuteReader(String sql, HandleDataReader dataReaderHandler, List`1 parameters) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\OracleDataAccess.cs:line 54
+at QAutomate.Framework.Helpers.DeviceHelper.Get_stock_device_serial_number_by_model(String model, String stockHandler, String stockDescription) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\DeviceHelper.cs:line 382
+at QAutomate.Framework.Web.Pages.EnterDeviceInformationSpoke.Enter_serial_number_for_all_devices(String deviceFromStockHandler, String stockDescription) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Web\Pages\CSRModule\Product Management\Devices\EnterDeviceInformationSpoke.cs:line 146
+at QAutomate.Framework.Web.Pages.EnterDeviceInformationSpoke.Input_data(EnterDeviceInformationData data) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Web\Pages\CSRModule\Product Management\Devices\EnterDeviceInformationSpoke.cs:line 359
+at QAutomate.CommonSteps.CaptureSteps.Capture_products_with_device_present_and_without_wo_and_without_so(PageDataList pageDataList) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.CommonSteps\CaptureSteps.cs:line 125
+at RegressionTestSuite_New.TestCases.CSR.i29017_001.Capture_pending_product_Decoder_HD_and_SC() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\RegressionTestSuite_New\TestCases\CSR\Product Management\PPV&VOD\i29017_001_Get_EventSchedule_from_provisioning_by_action_5229.cs:line 67
+at RegressionTestSuite_New.TestCases.CSR.i29017_001.i29017_001_Get_EventSchedule_from_provisioning_by_action_5229() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\RegressionTestSuite_New\TestCases\CSR\Product Management\PPV&VOD\i29017_001_Get_EventSchedule_from_provisioning_by_action_5229.cs:line 40
+]]></stack-trace>
+                            </failure>
+                          </test-case>
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="i29017_002" executed="True" result="Failure" success="False" time="53.888" asserts="0">
+                        <results>
+                          <test-case name="RegressionTestSuite_New.TestCases.CSR.i29017_002.i29017_002_Get_EventSchedule_from_provisioning_by_action_171" executed="True" result="Error" success="False" time="53.885" asserts="0">
+                            <categories>
+                              <category name="ConfigurationModule.OrderableEvents.Schedules" />
+                            </categories>
+                            <failure>
+                              <message><![CDATA[Oracle.DataAccess.Client.OracleException : ORA-12557: TNS:protocol adapter not loadable]]></message>
+                              <stack-trace><![CDATA[at Oracle.DataAccess.Client.OracleException.HandleErrorHelper(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, OpoSqlValCtx* pOpoSqlValCtx, Object src, String procedure, Boolean bCheck, Int32 isRecoverable)
+at Oracle.DataAccess.Client.OracleException.HandleError(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, Object src)
+at Oracle.DataAccess.Client.OracleConnection.Open()
+at QAutomate.Framework.Helpers.Config.Build_connection_string(String dns, String appModule) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\Config.cs:line 268
+at QAutomate.Framework.Helpers.Config.get_ConnectionString() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\Config.cs:line 81
+at QAutomate.Framework.Helpers.OracleDataAccess.Get_connection() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\OracleDataAccess.cs:line 70
+at QAutomate.Framework.Helpers.OracleDataAccess.ExecuteReader(String sql, HandleDataReader dataReaderHandler, List`1 parameters) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\OracleDataAccess.cs:line 54
+at QAutomate.Framework.Helpers.DeviceHelper.Get_stock_device_serial_number_by_model(String model, String stockHandler, String stockDescription) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\DeviceHelper.cs:line 382
+at QAutomate.Framework.Web.Pages.EnterDeviceInformationSpoke.Enter_serial_number_for_all_devices(String deviceFromStockHandler, String stockDescription) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Web\Pages\CSRModule\Product Management\Devices\EnterDeviceInformationSpoke.cs:line 146
+at QAutomate.Framework.Web.Pages.EnterDeviceInformationSpoke.Input_data(EnterDeviceInformationData data) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Web\Pages\CSRModule\Product Management\Devices\EnterDeviceInformationSpoke.cs:line 359
+at QAutomate.CommonSteps.CaptureSteps.Capture_products_with_device_present_and_without_wo_and_without_so(PageDataList pageDataList) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.CommonSteps\CaptureSteps.cs:line 125
+at RegressionTestSuite_New.TestCases.CSR.i29017_002.Capture_active_product_Decoder_HD_and_SC() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\RegressionTestSuite_New\TestCases\CSR\Product Management\PPV&VOD\i29017_002_Get_EventSchedule_from_provisioning_by_action_171.cs:line 67
+at RegressionTestSuite_New.TestCases.CSR.i29017_002.i29017_002_Get_EventSchedule_from_provisioning_by_action_171() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\RegressionTestSuite_New\TestCases\CSR\Product Management\PPV&VOD\i29017_002_Get_EventSchedule_from_provisioning_by_action_171.cs:line 40
+]]></stack-trace>
+                            </failure>
+                          </test-case>
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="i29017_003" executed="True" result="Failure" success="False" time="56.005" asserts="0">
+                        <results>
+                          <test-case name="RegressionTestSuite_New.TestCases.CSR.i29017_003.i29017_003_Get_EventSchedule_from_provisioning_by_action_111" executed="True" result="Error" success="False" time="56.003" asserts="0">
+                            <categories>
+                              <category name="ConfigurationModule.OrderableEvents.Schedules" />
+                            </categories>
+                            <failure>
+                              <message><![CDATA[Oracle.DataAccess.Client.OracleException : ORA-12557: TNS:protocol adapter not loadable]]></message>
+                              <stack-trace><![CDATA[at Oracle.DataAccess.Client.OracleException.HandleErrorHelper(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, OpoSqlValCtx* pOpoSqlValCtx, Object src, String procedure, Boolean bCheck, Int32 isRecoverable)
+at Oracle.DataAccess.Client.OracleException.HandleError(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, Object src)
+at Oracle.DataAccess.Client.OracleConnection.Open()
+at QAutomate.Framework.Helpers.Config.Build_connection_string(String dns, String appModule) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\Config.cs:line 268
+at QAutomate.Framework.Helpers.Config.get_ConnectionString() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\Config.cs:line 81
+at QAutomate.Framework.Helpers.OracleDataAccess.Get_connection() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\OracleDataAccess.cs:line 70
+at QAutomate.Framework.Helpers.OracleDataAccess.ExecuteReader(String sql, HandleDataReader dataReaderHandler, List`1 parameters) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\OracleDataAccess.cs:line 54
+at QAutomate.Framework.Helpers.DeviceHelper.Get_stock_device_serial_number_by_model(String model, String stockHandler, String stockDescription) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\DeviceHelper.cs:line 382
+at QAutomate.Framework.Web.Pages.EnterDeviceInformationSpoke.Enter_serial_number_for_all_devices(String deviceFromStockHandler, String stockDescription) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Web\Pages\CSRModule\Product Management\Devices\EnterDeviceInformationSpoke.cs:line 146
+at QAutomate.Framework.Web.Pages.EnterDeviceInformationSpoke.Input_data(EnterDeviceInformationData data) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Web\Pages\CSRModule\Product Management\Devices\EnterDeviceInformationSpoke.cs:line 359
+at QAutomate.CommonSteps.CaptureSteps.Capture_products_with_device_present_and_without_wo_and_without_so(PageDataList pageDataList) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.CommonSteps\CaptureSteps.cs:line 125
+at RegressionTestSuite_New.TestCases.CSR.i29017_003.Capture_active_product_Decoder_HD_and_SC() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\RegressionTestSuite_New\TestCases\CSR\Product Management\PPV&VOD\i29017_003_Get_EventSchedule_from_provisioning_by_action_111.cs:line 84
+at RegressionTestSuite_New.TestCases.CSR.i29017_003.i29017_003_Get_EventSchedule_from_provisioning_by_action_111() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\RegressionTestSuite_New\TestCases\CSR\Product Management\PPV&VOD\i29017_003_Get_EventSchedule_from_provisioning_by_action_111.cs:line 24
+]]></stack-trace>
+                            </failure>
+                          </test-case>
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="i31049_001" executed="True" result="Failure" success="False" time="0.335" asserts="0">
+                        <results>
+                          <test-case name="RegressionTestSuite_New.TestCases.CSR.i31049_001.i31049_001_Add_an_scheduled_OPPV" executed="True" result="Error" success="False" time="0.333" asserts="0">
+                            <categories>
+                              <category name="CSRModule.ProductManagement.PPVandVOD" />
+                            </categories>
+                            <failure>
+                              <message><![CDATA[Oracle.DataAccess.Client.OracleException : ORA-12557: TNS:protocol adapter not loadable]]></message>
+                              <stack-trace><![CDATA[at Oracle.DataAccess.Client.OracleException.HandleErrorHelper(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, OpoSqlValCtx* pOpoSqlValCtx, Object src, String procedure, Boolean bCheck, Int32 isRecoverable)
+at Oracle.DataAccess.Client.OracleException.HandleError(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, Object src)
+at Oracle.DataAccess.Client.OracleConnection.Open()
+at QAutomate.Framework.Helpers.Config.Build_connection_string(String dns, String appModule) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\Config.cs:line 268
+at QAutomate.Framework.Helpers.Config.get_ConnectionString() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\Config.cs:line 81
+at QAutomate.Framework.Helpers.OracleDataAccess.Get_connection() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\OracleDataAccess.cs:line 70
+at QAutomate.Framework.Helpers.OracleDataAccess.ExecuteScalar[T](String sql, List`1 parameters) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\OracleDataAccess.cs:line 14
+at QAutomate.Framework.Helpers.ConfigHelper.Add_a_new_event_schedule_with_specific_event_start_and_end_date(DateTime eventStartDateTime, DateTime eventEndDateTime) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\ConfigHelper.cs:line 1174
+at RegressionTestSuite_New.TestCases.CSR.PPV_VODTestBase.Add_a_new_event_schedule_with_above_event_start_and_end_date_time() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\RegressionTestSuite_New\TestCases\CSR\Product Management\PPV&VOD\PPV_VODTestBase.cs:line 542
+at RegressionTestSuite_New.TestCases.CSR.i31049_001.i31049_001_Add_an_scheduled_OPPV() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\RegressionTestSuite_New\TestCases\CSR\Product Management\PPV&VOD\i31049_001_Add_an_scheduled_OPPV.cs:line 37
+]]></stack-trace>
+                            </failure>
+                          </test-case>
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="i31049_002" executed="True" result="Failure" success="False" time="0.100" asserts="0">
+                        <results>
+                          <test-case name="RegressionTestSuite_New.TestCases.CSR.i31049_002.i31049_002_Add_an_in_progress_OPPV" executed="True" result="Error" success="False" time="0.096" asserts="0">
+                            <categories>
+                              <category name="CSRModule.ProductManagement.PPVandVOD" />
+                            </categories>
+                            <failure>
+                              <message><![CDATA[Oracle.DataAccess.Client.OracleException : ORA-12557: TNS:protocol adapter not loadable]]></message>
+                              <stack-trace><![CDATA[at Oracle.DataAccess.Client.OracleException.HandleErrorHelper(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, OpoSqlValCtx* pOpoSqlValCtx, Object src, String procedure, Boolean bCheck, Int32 isRecoverable)
+at Oracle.DataAccess.Client.OracleException.HandleError(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, Object src)
+at Oracle.DataAccess.Client.OracleConnection.Open()
+at QAutomate.Framework.Helpers.Config.Build_connection_string(String dns, String appModule) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\Config.cs:line 268
+at QAutomate.Framework.Helpers.Config.get_ConnectionString() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\Config.cs:line 81
+at QAutomate.Framework.Helpers.OracleDataAccess.Get_connection() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\OracleDataAccess.cs:line 70
+at QAutomate.Framework.Helpers.OracleDataAccess.ExecuteScalar[T](String sql, List`1 parameters) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\OracleDataAccess.cs:line 14
+at QAutomate.Framework.Helpers.ConfigHelper.Add_a_new_event_schedule_with_specific_event_start_and_end_date(DateTime eventStartDateTime, DateTime eventEndDateTime) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\ConfigHelper.cs:line 1174
+at RegressionTestSuite_New.TestCases.CSR.PPV_VODTestBase.Add_a_new_event_schedule_with_above_event_start_and_end_date_time() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\RegressionTestSuite_New\TestCases\CSR\Product Management\PPV&VOD\PPV_VODTestBase.cs:line 542
+at RegressionTestSuite_New.TestCases.CSR.i31049_002.i31049_002_Add_an_in_progress_OPPV() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\RegressionTestSuite_New\TestCases\CSR\Product Management\PPV&VOD\i31049_002_Add_an_in_progress_OPPV.cs:line 35
+]]></stack-trace>
+                            </failure>
+                          </test-case>
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="i31049_003" executed="True" result="Failure" success="False" time="0.026" asserts="0">
+                        <results>
+                          <test-case name="RegressionTestSuite_New.TestCases.CSR.i31049_003.i31049_003_Add_an_watched_OPPV" executed="True" result="Error" success="False" time="0.025" asserts="0">
+                            <categories>
+                              <category name="CSRModule.ProductManagement.PPVandVOD" />
+                            </categories>
+                            <failure>
+                              <message><![CDATA[Oracle.DataAccess.Client.OracleException : ORA-12557: TNS:protocol adapter not loadable]]></message>
+                              <stack-trace><![CDATA[at Oracle.DataAccess.Client.OracleException.HandleErrorHelper(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, OpoSqlValCtx* pOpoSqlValCtx, Object src, String procedure, Boolean bCheck, Int32 isRecoverable)
+at Oracle.DataAccess.Client.OracleException.HandleError(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, Object src)
+at Oracle.DataAccess.Client.OracleConnection.Open()
+at QAutomate.Framework.Helpers.Config.Build_connection_string(String dns, String appModule) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\Config.cs:line 268
+at QAutomate.Framework.Helpers.Config.get_ConnectionString() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\Config.cs:line 81
+at QAutomate.Framework.Helpers.OracleDataAccess.Get_connection() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\OracleDataAccess.cs:line 70
+at QAutomate.Framework.Helpers.OracleDataAccess.ExecuteScalar[T](String sql, List`1 parameters) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\OracleDataAccess.cs:line 14
+at QAutomate.Framework.Helpers.ConfigHelper.Add_a_new_event_schedule_with_specific_event_start_and_end_date(DateTime eventStartDateTime, DateTime eventEndDateTime) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\ConfigHelper.cs:line 1174
+at RegressionTestSuite_New.TestCases.CSR.PPV_VODTestBase.Add_a_new_event_schedule_with_above_event_start_and_end_date_time() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\RegressionTestSuite_New\TestCases\CSR\Product Management\PPV&VOD\PPV_VODTestBase.cs:line 542
+at RegressionTestSuite_New.TestCases.CSR.i31049_003.i31049_003_Add_an_watched_OPPV() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\RegressionTestSuite_New\TestCases\CSR\Product Management\PPV&VOD\i31049_003_Add_an_watched_OPPV.cs:line 35
+]]></stack-trace>
+                            </failure>
+                          </test-case>
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="i31049_004" executed="True" result="Failure" success="False" time="117.427" asserts="0">
+                        <results>
+                          <test-case name="RegressionTestSuite_New.TestCases.CSR.i31049_004.i31049_004_Event_start_end_date_should_apply_offset" executed="True" result="Error" success="False" time="117.426" asserts="0">
+                            <categories>
+                              <category name="CSRModule.ProductManagement.PPVandVOD" />
+                            </categories>
+                            <failure>
+                              <message><![CDATA[Oracle.DataAccess.Client.OracleException : ORA-12557: TNS:protocol adapter not loadable]]></message>
+                              <stack-trace><![CDATA[at Oracle.DataAccess.Client.OracleException.HandleErrorHelper(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, OpoSqlValCtx* pOpoSqlValCtx, Object src, String procedure, Boolean bCheck, Int32 isRecoverable)
+at Oracle.DataAccess.Client.OracleException.HandleError(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, Object src)
+at Oracle.DataAccess.Client.OracleConnection.Open()
+at QAutomate.Framework.Helpers.Config.Build_connection_string(String dns, String appModule) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\Config.cs:line 268
+at QAutomate.Framework.Helpers.Config.get_ConnectionString() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\Config.cs:line 81
+at QAutomate.Framework.Helpers.OracleDataAccess.Get_connection() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\OracleDataAccess.cs:line 70
+at QAutomate.Framework.Helpers.OracleDataAccess.ExecuteReader(String sql, HandleDataReader dataReaderHandler, List`1 parameters) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\OracleDataAccess.cs:line 54
+at QAutomate.Framework.Helpers.DeviceHelper.Get_stock_device_serial_number_by_model(String model, String stockHandler, String stockDescription) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\DeviceHelper.cs:line 382
+at QAutomate.Framework.Web.Pages.EnterDeviceInformationSpoke.Enter_serial_number_for_all_devices(String deviceFromStockHandler, String stockDescription) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Web\Pages\CSRModule\Product Management\Devices\EnterDeviceInformationSpoke.cs:line 146
+at QAutomate.Framework.Web.Pages.EnterDeviceInformationSpoke.Input_data(EnterDeviceInformationData data) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Web\Pages\CSRModule\Product Management\Devices\EnterDeviceInformationSpoke.cs:line 359
+at QAutomate.CommonSteps.CaptureSteps.Capture_products_with_device_present_and_without_wo(PageDataList pageDataList) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.CommonSteps\CaptureSteps.cs:line 248
+at RegressionTestSuite_New.TestCases.CSR.PPV_VODTestBase.Capture_TV_smartcard_with_device_present_without_wo() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\RegressionTestSuite_New\TestCases\CSR\Product Management\PPV&VOD\PPV_VODTestBase.cs:line 584
+at RegressionTestSuite_New.TestCases.CSR.i31049_004.i31049_004_Event_start_end_date_should_apply_offset() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\RegressionTestSuite_New\TestCases\CSR\Product Management\PPV&VOD\i31049_004_Event_start_end_date_should_apply_offset.cs:line 39
+]]></stack-trace>
+                            </failure>
+                          </test-case>
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="i31049_005" executed="True" result="Failure" success="False" time="0.106" asserts="0">
+                        <results>
+                          <test-case name="RegressionTestSuite_New.TestCases.CSR.i31049_005.I31049_005_Search_PPV_compare_UTC_with_Sell_From_and_Sell_To" executed="True" result="Error" success="False" time="0.105" asserts="0">
+                            <categories>
+                              <category name="CSRModule.ProductManagement.PPVandVOD" />
+                            </categories>
+                            <failure>
+                              <message><![CDATA[Oracle.DataAccess.Client.OracleException : ORA-12557: TNS:protocol adapter not loadable]]></message>
+                              <stack-trace><![CDATA[at Oracle.DataAccess.Client.OracleException.HandleErrorHelper(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, OpoSqlValCtx* pOpoSqlValCtx, Object src, String procedure, Boolean bCheck, Int32 isRecoverable)
+at Oracle.DataAccess.Client.OracleException.HandleError(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, Object src)
+at Oracle.DataAccess.Client.OracleConnection.Open()
+at QAutomate.Framework.Helpers.Config.Build_connection_string(String dns, String appModule) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\Config.cs:line 268
+at QAutomate.Framework.Helpers.Config.get_ConnectionString() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\Config.cs:line 81
+at QAutomate.Framework.Helpers.OracleDataAccess.Get_connection() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\OracleDataAccess.cs:line 70
+at QAutomate.Framework.Helpers.OracleDataAccess.ExecuteScalar[T](String sql, List`1 parameters) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\OracleDataAccess.cs:line 14
+at QAutomate.Framework.Helpers.ConfigHelper.Add_a_new_event_schedule_with_specific_sell_from_and_to_date(DateTime sellFromDate, DateTime sellToDate) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\ConfigHelper.cs:line 1185
+at RegressionTestSuite_New.TestCases.CSR.PPV_VODTestBase.Add_a_new_event_schedule_with_above_sell_from_and_to_date_time() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\RegressionTestSuite_New\TestCases\CSR\Product Management\PPV&VOD\PPV_VODTestBase.cs:line 547
+at RegressionTestSuite_New.TestCases.CSR.i31049_005.I31049_005_Search_PPV_compare_UTC_with_Sell_From_and_Sell_To() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\RegressionTestSuite_New\TestCases\CSR\Product Management\PPV&VOD\I31049_005_Search_PPV_compare_UTC_with_Sell_From_and_Sell_To.cs:line 39
+]]></stack-trace>
+                            </failure>
+                          </test-case>
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="i31049_006" executed="True" result="Failure" success="False" time="0.091" asserts="0">
+                        <results>
+                          <test-case name="RegressionTestSuite_New.TestCases.CSR.i31049_006.I31049_006_Search_PPV_compare_UTC_with_Sell_From_and_Sell_To" executed="True" result="Error" success="False" time="0.090" asserts="0">
+                            <categories>
+                              <category name="CSRModule.ProductManagement.PPVandVOD" />
+                            </categories>
+                            <failure>
+                              <message><![CDATA[Oracle.DataAccess.Client.OracleException : ORA-12557: TNS:protocol adapter not loadable]]></message>
+                              <stack-trace><![CDATA[at Oracle.DataAccess.Client.OracleException.HandleErrorHelper(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, OpoSqlValCtx* pOpoSqlValCtx, Object src, String procedure, Boolean bCheck, Int32 isRecoverable)
+at Oracle.DataAccess.Client.OracleException.HandleError(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, Object src)
+at Oracle.DataAccess.Client.OracleConnection.Open()
+at QAutomate.Framework.Helpers.Config.Build_connection_string(String dns, String appModule) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\Config.cs:line 268
+at QAutomate.Framework.Helpers.Config.get_ConnectionString() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\Config.cs:line 81
+at QAutomate.Framework.Helpers.OracleDataAccess.Get_connection() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\OracleDataAccess.cs:line 70
+at QAutomate.Framework.Helpers.OracleDataAccess.ExecuteScalar[T](String sql, List`1 parameters) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\OracleDataAccess.cs:line 14
+at QAutomate.Framework.Helpers.ConfigHelper.Add_a_new_event_schedule_with_specific_sell_from_and_to_date(DateTime sellFromDate, DateTime sellToDate) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\ConfigHelper.cs:line 1185
+at RegressionTestSuite_New.TestCases.CSR.PPV_VODTestBase.Add_a_new_event_schedule_with_above_sell_from_and_to_date_time() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\RegressionTestSuite_New\TestCases\CSR\Product Management\PPV&VOD\PPV_VODTestBase.cs:line 547
+at RegressionTestSuite_New.TestCases.CSR.i31049_006.I31049_006_Search_PPV_compare_UTC_with_Sell_From_and_Sell_To() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\RegressionTestSuite_New\TestCases\CSR\Product Management\PPV&VOD\I31049_006_Search_PPV_compare_UTC_with_Sell_From_and_Sell_To.cs:line 41
+]]></stack-trace>
+                            </failure>
+                          </test-case>
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="i31764_001" executed="True" result="Failure" success="False" time="55.422" asserts="0">
+                        <results>
+                          <test-case name="RegressionTestSuite_New.TestCases.CSR.i31764_001.i31764_001_Ordering_PPV_when_payment_is_required_with_debit_balance" executed="True" result="Error" success="False" time="55.418" asserts="0">
+                            <categories>
+                              <category name="CSRModule.ProductManagement.PPVandVOD" />
+                            </categories>
+                            <failure>
+                              <message><![CDATA[Oracle.DataAccess.Client.OracleException : ORA-12557: TNS:protocol adapter not loadable]]></message>
+                              <stack-trace><![CDATA[at Oracle.DataAccess.Client.OracleException.HandleErrorHelper(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, OpoSqlValCtx* pOpoSqlValCtx, Object src, String procedure, Boolean bCheck, Int32 isRecoverable)
+at Oracle.DataAccess.Client.OracleException.HandleError(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, Object src)
+at Oracle.DataAccess.Client.OracleConnection.Open()
+at QAutomate.Framework.Helpers.Config.Build_connection_string(String dns, String appModule) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\Config.cs:line 268
+at QAutomate.Framework.Helpers.Config.get_ConnectionString() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\Config.cs:line 81
+at QAutomate.Framework.Helpers.OracleDataAccess.Get_connection() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\OracleDataAccess.cs:line 70
+at QAutomate.Framework.Helpers.OracleDataAccess.ExecuteReader(String sql, HandleDataReader dataReaderHandler, List`1 parameters) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\OracleDataAccess.cs:line 54
+at QAutomate.Framework.Helpers.DeviceHelper.Get_stock_device_serial_number_by_model(String model, String stockHandler, String stockDescription) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\DeviceHelper.cs:line 382
+at QAutomate.Framework.Web.Pages.EnterDeviceInformationSpoke.Enter_serial_number_for_all_devices(String deviceFromStockHandler, String stockDescription) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Web\Pages\CSRModule\Product Management\Devices\EnterDeviceInformationSpoke.cs:line 146
+at QAutomate.Framework.Web.Pages.EnterDeviceInformationSpoke.Input_data(EnterDeviceInformationData data) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Web\Pages\CSRModule\Product Management\Devices\EnterDeviceInformationSpoke.cs:line 359
+at QAutomate.CommonSteps.CaptureSteps.Capture_products_with_device_present_and_without_wo(PageDataList pageDataList) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.CommonSteps\CaptureSteps.cs:line 248
+at RegressionTestSuite_New.TestCases.CSR.PPV_VODTestBase.Capture_TV_smartcard_with_device_present_without_wo() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\RegressionTestSuite_New\TestCases\CSR\Product Management\PPV&VOD\PPV_VODTestBase.cs:line 584
+at RegressionTestSuite_New.TestCases.CSR.i31764_001.i31764_001_Ordering_PPV_when_payment_is_required_with_debit_balance() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\RegressionTestSuite_New\TestCases\CSR\Product Management\PPV&VOD\i31764_001_Ordering_PPV_when_payment_is_required_with_debit_balance.cs:line 27
+]]></stack-trace>
+                            </failure>
+                          </test-case>
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="i31764_002" executed="True" result="Failure" success="False" time="54.240" asserts="0">
+                        <results>
+                          <test-case name="RegressionTestSuite_New.TestCases.CSR.i31764_002.i31764_002_Ordering_PPV_when_payment_is_required_with_credit_balance" executed="True" result="Error" success="False" time="54.238" asserts="0">
+                            <categories>
+                              <category name="CSRModule.ProductManagement.PPVandVOD" />
+                            </categories>
+                            <failure>
+                              <message><![CDATA[Oracle.DataAccess.Client.OracleException : ORA-12557: TNS:protocol adapter not loadable]]></message>
+                              <stack-trace><![CDATA[at Oracle.DataAccess.Client.OracleException.HandleErrorHelper(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, OpoSqlValCtx* pOpoSqlValCtx, Object src, String procedure, Boolean bCheck, Int32 isRecoverable)
+at Oracle.DataAccess.Client.OracleException.HandleError(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, Object src)
+at Oracle.DataAccess.Client.OracleConnection.Open()
+at QAutomate.Framework.Helpers.Config.Build_connection_string(String dns, String appModule) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\Config.cs:line 268
+at QAutomate.Framework.Helpers.Config.get_ConnectionString() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\Config.cs:line 81
+at QAutomate.Framework.Helpers.OracleDataAccess.Get_connection() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\OracleDataAccess.cs:line 70
+at QAutomate.Framework.Helpers.OracleDataAccess.ExecuteReader(String sql, HandleDataReader dataReaderHandler, List`1 parameters) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\OracleDataAccess.cs:line 54
+at QAutomate.Framework.Helpers.DeviceHelper.Get_stock_device_serial_number_by_model(String model, String stockHandler, String stockDescription) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\DeviceHelper.cs:line 382
+at QAutomate.Framework.Web.Pages.EnterDeviceInformationSpoke.Enter_serial_number_for_all_devices(String deviceFromStockHandler, String stockDescription) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Web\Pages\CSRModule\Product Management\Devices\EnterDeviceInformationSpoke.cs:line 146
+at QAutomate.Framework.Web.Pages.EnterDeviceInformationSpoke.Input_data(EnterDeviceInformationData data) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Web\Pages\CSRModule\Product Management\Devices\EnterDeviceInformationSpoke.cs:line 359
+at QAutomate.CommonSteps.CaptureSteps.Capture_products_with_device_present_and_without_wo(PageDataList pageDataList) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.CommonSteps\CaptureSteps.cs:line 248
+at RegressionTestSuite_New.TestCases.CSR.PPV_VODTestBase.Capture_TV_smartcard_with_device_present_without_wo() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\RegressionTestSuite_New\TestCases\CSR\Product Management\PPV&VOD\PPV_VODTestBase.cs:line 584
+at RegressionTestSuite_New.TestCases.CSR.i31764_002.i31764_002_Ordering_PPV_when_payment_is_required_with_credit_balance() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\RegressionTestSuite_New\TestCases\CSR\Product Management\PPV&VOD\i31764_002_Ordering_PPV_when_payment_is_required_with_credit_balance.cs:line 27
+]]></stack-trace>
+                            </failure>
+                          </test-case>
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="i31764_003" executed="True" result="Failure" success="False" time="53.726" asserts="0">
+                        <results>
+                          <test-case name="RegressionTestSuite_New.TestCases.CSR.i31764_003.i31764_003_Ordering_PPV_when_payment_is_not_required_with_debit_balance" executed="True" result="Error" success="False" time="53.725" asserts="0">
+                            <categories>
+                              <category name="CSRModule.ProductManagement.PPVandVOD" />
+                            </categories>
+                            <failure>
+                              <message><![CDATA[Oracle.DataAccess.Client.OracleException : ORA-12557: TNS:protocol adapter not loadable]]></message>
+                              <stack-trace><![CDATA[at Oracle.DataAccess.Client.OracleException.HandleErrorHelper(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, OpoSqlValCtx* pOpoSqlValCtx, Object src, String procedure, Boolean bCheck, Int32 isRecoverable)
+at Oracle.DataAccess.Client.OracleException.HandleError(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, Object src)
+at Oracle.DataAccess.Client.OracleConnection.Open()
+at QAutomate.Framework.Helpers.Config.Build_connection_string(String dns, String appModule) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\Config.cs:line 268
+at QAutomate.Framework.Helpers.Config.get_ConnectionString() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\Config.cs:line 81
+at QAutomate.Framework.Helpers.OracleDataAccess.Get_connection() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\OracleDataAccess.cs:line 70
+at QAutomate.Framework.Helpers.OracleDataAccess.ExecuteReader(String sql, HandleDataReader dataReaderHandler, List`1 parameters) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\OracleDataAccess.cs:line 54
+at QAutomate.Framework.Helpers.DeviceHelper.Get_stock_device_serial_number_by_model(String model, String stockHandler, String stockDescription) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\DeviceHelper.cs:line 382
+at QAutomate.Framework.Web.Pages.EnterDeviceInformationSpoke.Enter_serial_number_for_all_devices(String deviceFromStockHandler, String stockDescription) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Web\Pages\CSRModule\Product Management\Devices\EnterDeviceInformationSpoke.cs:line 146
+at QAutomate.Framework.Web.Pages.EnterDeviceInformationSpoke.Input_data(EnterDeviceInformationData data) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Web\Pages\CSRModule\Product Management\Devices\EnterDeviceInformationSpoke.cs:line 359
+at QAutomate.CommonSteps.CaptureSteps.Capture_products_with_device_present_and_without_wo(PageDataList pageDataList) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.CommonSteps\CaptureSteps.cs:line 248
+at RegressionTestSuite_New.TestCases.CSR.PPV_VODTestBase.Capture_TV_smartcard_with_device_present_without_wo() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\RegressionTestSuite_New\TestCases\CSR\Product Management\PPV&VOD\PPV_VODTestBase.cs:line 584
+at RegressionTestSuite_New.TestCases.CSR.i31764_003.i31764_003_Ordering_PPV_when_payment_is_not_required_with_debit_balance() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\RegressionTestSuite_New\TestCases\CSR\Product Management\PPV&VOD\i31764_003_Ordering_PPV_when_payment_is_not_required_with_debit_balance.cs:line 27
+]]></stack-trace>
+                            </failure>
+                          </test-case>
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="i31764_004" executed="True" result="Failure" success="False" time="55.345" asserts="0">
+                        <results>
+                          <test-case name="RegressionTestSuite_New.TestCases.CSR.i31764_004.i31764_004_Ordering_PPV_when_payment_is_not_required_with_credit_balance" executed="True" result="Error" success="False" time="55.344" asserts="0">
+                            <categories>
+                              <category name="CSRModule.ProductManagement.PPVandVOD" />
+                            </categories>
+                            <failure>
+                              <message><![CDATA[Oracle.DataAccess.Client.OracleException : ORA-12557: TNS:protocol adapter not loadable]]></message>
+                              <stack-trace><![CDATA[at Oracle.DataAccess.Client.OracleException.HandleErrorHelper(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, OpoSqlValCtx* pOpoSqlValCtx, Object src, String procedure, Boolean bCheck, Int32 isRecoverable)
+at Oracle.DataAccess.Client.OracleException.HandleError(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, Object src)
+at Oracle.DataAccess.Client.OracleConnection.Open()
+at QAutomate.Framework.Helpers.Config.Build_connection_string(String dns, String appModule) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\Config.cs:line 268
+at QAutomate.Framework.Helpers.Config.get_ConnectionString() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\Config.cs:line 81
+at QAutomate.Framework.Helpers.OracleDataAccess.Get_connection() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\OracleDataAccess.cs:line 70
+at QAutomate.Framework.Helpers.OracleDataAccess.ExecuteReader(String sql, HandleDataReader dataReaderHandler, List`1 parameters) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\OracleDataAccess.cs:line 54
+at QAutomate.Framework.Helpers.DeviceHelper.Get_stock_device_serial_number_by_model(String model, String stockHandler, String stockDescription) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\DeviceHelper.cs:line 382
+at QAutomate.Framework.Web.Pages.EnterDeviceInformationSpoke.Enter_serial_number_for_all_devices(String deviceFromStockHandler, String stockDescription) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Web\Pages\CSRModule\Product Management\Devices\EnterDeviceInformationSpoke.cs:line 146
+at QAutomate.Framework.Web.Pages.EnterDeviceInformationSpoke.Input_data(EnterDeviceInformationData data) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Web\Pages\CSRModule\Product Management\Devices\EnterDeviceInformationSpoke.cs:line 359
+at QAutomate.CommonSteps.CaptureSteps.Capture_products_with_device_present_and_without_wo(PageDataList pageDataList) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.CommonSteps\CaptureSteps.cs:line 248
+at RegressionTestSuite_New.TestCases.CSR.PPV_VODTestBase.Capture_TV_smartcard_with_device_present_without_wo() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\RegressionTestSuite_New\TestCases\CSR\Product Management\PPV&VOD\PPV_VODTestBase.cs:line 584
+at RegressionTestSuite_New.TestCases.CSR.i31764_004.i31764_004_Ordering_PPV_when_payment_is_not_required_with_credit_balance() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\RegressionTestSuite_New\TestCases\CSR\Product Management\PPV&VOD\i31764_004_Ordering_PPV_when_payment_is_not_required_with_credit_balance.cs:line 27
+]]></stack-trace>
+                            </failure>
+                          </test-case>
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="i31764_005" executed="True" result="Failure" success="False" time="54.451" asserts="0">
+                        <results>
+                          <test-case name="RegressionTestSuite_New.TestCases.CSR.i31764_005.i31764_005_Ordering_PPV_when_payment_is_required_with_credit_balance_not_enough_for_PPV" executed="True" result="Error" success="False" time="54.450" asserts="0">
+                            <categories>
+                              <category name="CSRModule.ProductManagement.PPVandVOD" />
+                            </categories>
+                            <failure>
+                              <message><![CDATA[Oracle.DataAccess.Client.OracleException : ORA-12557: TNS:protocol adapter not loadable]]></message>
+                              <stack-trace><![CDATA[at Oracle.DataAccess.Client.OracleException.HandleErrorHelper(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, OpoSqlValCtx* pOpoSqlValCtx, Object src, String procedure, Boolean bCheck, Int32 isRecoverable)
+at Oracle.DataAccess.Client.OracleException.HandleError(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, Object src)
+at Oracle.DataAccess.Client.OracleConnection.Open()
+at QAutomate.Framework.Helpers.Config.Build_connection_string(String dns, String appModule) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\Config.cs:line 268
+at QAutomate.Framework.Helpers.Config.get_ConnectionString() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\Config.cs:line 81
+at QAutomate.Framework.Helpers.OracleDataAccess.Get_connection() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\OracleDataAccess.cs:line 70
+at QAutomate.Framework.Helpers.OracleDataAccess.ExecuteReader(String sql, HandleDataReader dataReaderHandler, List`1 parameters) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\OracleDataAccess.cs:line 54
+at QAutomate.Framework.Helpers.DeviceHelper.Get_stock_device_serial_number_by_model(String model, String stockHandler, String stockDescription) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\DeviceHelper.cs:line 382
+at QAutomate.Framework.Web.Pages.EnterDeviceInformationSpoke.Enter_serial_number_for_all_devices(String deviceFromStockHandler, String stockDescription) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Web\Pages\CSRModule\Product Management\Devices\EnterDeviceInformationSpoke.cs:line 146
+at QAutomate.Framework.Web.Pages.EnterDeviceInformationSpoke.Input_data(EnterDeviceInformationData data) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Web\Pages\CSRModule\Product Management\Devices\EnterDeviceInformationSpoke.cs:line 359
+at QAutomate.CommonSteps.CaptureSteps.Capture_products_with_device_present_and_without_wo(PageDataList pageDataList) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.CommonSteps\CaptureSteps.cs:line 248
+at RegressionTestSuite_New.TestCases.CSR.PPV_VODTestBase.Capture_TV_smartcard_with_device_present_without_wo() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\RegressionTestSuite_New\TestCases\CSR\Product Management\PPV&VOD\PPV_VODTestBase.cs:line 584
+at RegressionTestSuite_New.TestCases.CSR.i31764_005.i31764_005_Ordering_PPV_when_payment_is_required_with_credit_balance_not_enough_for_PPV() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\RegressionTestSuite_New\TestCases\CSR\Product Management\PPV&VOD\i31764_005_Ordering_PPV_when_payment_is_required_with_credit_balance_not_enough_for_PPV.cs:line 27
+]]></stack-trace>
+                            </failure>
+                          </test-case>
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="i31764_006" executed="True" result="Failure" success="False" time="53.911" asserts="0">
+                        <results>
+                          <test-case name="RegressionTestSuite_New.TestCases.CSR.i31764_006.i31764_006_Ordering_PPV_when_payment_is_not_required_with_credit_balance_not_enough_for_PPV" executed="True" result="Error" success="False" time="53.909" asserts="0">
+                            <categories>
+                              <category name="CSRModule.ProductManagement.PPVandVOD" />
+                            </categories>
+                            <failure>
+                              <message><![CDATA[Oracle.DataAccess.Client.OracleException : ORA-12557: TNS:protocol adapter not loadable]]></message>
+                              <stack-trace><![CDATA[at Oracle.DataAccess.Client.OracleException.HandleErrorHelper(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, OpoSqlValCtx* pOpoSqlValCtx, Object src, String procedure, Boolean bCheck, Int32 isRecoverable)
+at Oracle.DataAccess.Client.OracleException.HandleError(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, Object src)
+at Oracle.DataAccess.Client.OracleConnection.Open()
+at QAutomate.Framework.Helpers.Config.Build_connection_string(String dns, String appModule) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\Config.cs:line 268
+at QAutomate.Framework.Helpers.Config.get_ConnectionString() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\Config.cs:line 81
+at QAutomate.Framework.Helpers.OracleDataAccess.Get_connection() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\OracleDataAccess.cs:line 70
+at QAutomate.Framework.Helpers.OracleDataAccess.ExecuteReader(String sql, HandleDataReader dataReaderHandler, List`1 parameters) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\OracleDataAccess.cs:line 54
+at QAutomate.Framework.Helpers.DeviceHelper.Get_stock_device_serial_number_by_model(String model, String stockHandler, String stockDescription) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\DeviceHelper.cs:line 382
+at QAutomate.Framework.Web.Pages.EnterDeviceInformationSpoke.Enter_serial_number_for_all_devices(String deviceFromStockHandler, String stockDescription) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Web\Pages\CSRModule\Product Management\Devices\EnterDeviceInformationSpoke.cs:line 146
+at QAutomate.Framework.Web.Pages.EnterDeviceInformationSpoke.Input_data(EnterDeviceInformationData data) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Web\Pages\CSRModule\Product Management\Devices\EnterDeviceInformationSpoke.cs:line 359
+at QAutomate.CommonSteps.CaptureSteps.Capture_products_with_device_present_and_without_wo(PageDataList pageDataList) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.CommonSteps\CaptureSteps.cs:line 248
+at RegressionTestSuite_New.TestCases.CSR.PPV_VODTestBase.Capture_TV_smartcard_with_device_present_without_wo() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\RegressionTestSuite_New\TestCases\CSR\Product Management\PPV&VOD\PPV_VODTestBase.cs:line 584
+at RegressionTestSuite_New.TestCases.CSR.i31764_006.i31764_006_Ordering_PPV_when_payment_is_not_required_with_credit_balance_not_enough_for_PPV() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\RegressionTestSuite_New\TestCases\CSR\Product Management\PPV&VOD\i31764_006_Ordering_PPV_when_payment_is_not_required_with_credit_balance_not_enough_for_PPV.cs:line 27
+]]></stack-trace>
+                            </failure>
+                          </test-case>
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="i31764_007" executed="True" result="Failure" success="False" time="57.164" asserts="0">
+                        <results>
+                          <test-case name="RegressionTestSuite_New.TestCases.CSR.i31764_007.i31764_007_Verify_finish_button_status_when_click_back_and_rechoose_another_OPPV_when_payment_is_required" executed="True" result="Error" success="False" time="57.163" asserts="0">
+                            <categories>
+                              <category name="CSRModule.ProductManagement.PPVandVOD" />
+                            </categories>
+                            <failure>
+                              <message><![CDATA[Oracle.DataAccess.Client.OracleException : ORA-12557: TNS:protocol adapter not loadable]]></message>
+                              <stack-trace><![CDATA[at Oracle.DataAccess.Client.OracleException.HandleErrorHelper(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, OpoSqlValCtx* pOpoSqlValCtx, Object src, String procedure, Boolean bCheck, Int32 isRecoverable)
+at Oracle.DataAccess.Client.OracleException.HandleError(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, Object src)
+at Oracle.DataAccess.Client.OracleConnection.Open()
+at QAutomate.Framework.Helpers.Config.Build_connection_string(String dns, String appModule) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\Config.cs:line 268
+at QAutomate.Framework.Helpers.Config.get_ConnectionString() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\Config.cs:line 81
+at QAutomate.Framework.Helpers.OracleDataAccess.Get_connection() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\OracleDataAccess.cs:line 70
+at QAutomate.Framework.Helpers.OracleDataAccess.ExecuteReader(String sql, HandleDataReader dataReaderHandler, List`1 parameters) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\OracleDataAccess.cs:line 54
+at QAutomate.Framework.Helpers.DeviceHelper.Get_stock_device_serial_number_by_model(String model, String stockHandler, String stockDescription) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\DeviceHelper.cs:line 382
+at QAutomate.Framework.Web.Pages.EnterDeviceInformationSpoke.Enter_serial_number_for_all_devices(String deviceFromStockHandler, String stockDescription) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Web\Pages\CSRModule\Product Management\Devices\EnterDeviceInformationSpoke.cs:line 146
+at QAutomate.Framework.Web.Pages.EnterDeviceInformationSpoke.Input_data(EnterDeviceInformationData data) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Web\Pages\CSRModule\Product Management\Devices\EnterDeviceInformationSpoke.cs:line 359
+at QAutomate.CommonSteps.CaptureSteps.Capture_products_with_device_present_and_without_wo(PageDataList pageDataList) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.CommonSteps\CaptureSteps.cs:line 248
+at RegressionTestSuite_New.TestCases.CSR.PPV_VODTestBase.Capture_TV_smartcard_with_device_present_without_wo() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\RegressionTestSuite_New\TestCases\CSR\Product Management\PPV&VOD\PPV_VODTestBase.cs:line 584
+at RegressionTestSuite_New.TestCases.CSR.i31764_007.i31764_007_Verify_finish_button_status_when_click_back_and_rechoose_another_OPPV_when_payment_is_required() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\RegressionTestSuite_New\TestCases\CSR\Product Management\PPV&VOD\i31764_007_Verify_finish_button_status_when_click_back_and_rechoose_another_OPPV_when_payment_is_required.cs:line 27
+]]></stack-trace>
+                            </failure>
+                          </test-case>
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="i31764_008" executed="True" result="Failure" success="False" time="56.337" asserts="0">
+                        <results>
+                          <test-case name="RegressionTestSuite_New.TestCases.CSR.i31764_008.i31764_008_Change_PPV_device_with_different_FA_when_payment_is_required" executed="True" result="Error" success="False" time="56.336" asserts="0">
+                            <categories>
+                              <category name="CSRModule.ProductManagement.PPVandVOD" />
+                            </categories>
+                            <failure>
+                              <message><![CDATA[Oracle.DataAccess.Client.OracleException : ORA-12557: TNS:protocol adapter not loadable]]></message>
+                              <stack-trace><![CDATA[at Oracle.DataAccess.Client.OracleException.HandleErrorHelper(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, OpoSqlValCtx* pOpoSqlValCtx, Object src, String procedure, Boolean bCheck, Int32 isRecoverable)
+at Oracle.DataAccess.Client.OracleException.HandleError(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, Object src)
+at Oracle.DataAccess.Client.OracleConnection.Open()
+at QAutomate.Framework.Helpers.Config.Build_connection_string(String dns, String appModule) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\Config.cs:line 268
+at QAutomate.Framework.Helpers.Config.get_ConnectionString() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\Config.cs:line 81
+at QAutomate.Framework.Helpers.OracleDataAccess.Get_connection() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\OracleDataAccess.cs:line 70
+at QAutomate.Framework.Helpers.OracleDataAccess.ExecuteReader(String sql, HandleDataReader dataReaderHandler, List`1 parameters) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\OracleDataAccess.cs:line 54
+at QAutomate.Framework.Helpers.DeviceHelper.Get_stock_device_serial_number_by_model(String model, String stockHandler, String stockDescription) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\DeviceHelper.cs:line 382
+at QAutomate.Framework.Web.Pages.EnterDeviceInformationSpoke.Enter_serial_number_for_all_devices(String deviceFromStockHandler, String stockDescription) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Web\Pages\CSRModule\Product Management\Devices\EnterDeviceInformationSpoke.cs:line 146
+at QAutomate.Framework.Web.Pages.EnterDeviceInformationSpoke.Input_data(EnterDeviceInformationData data) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Web\Pages\CSRModule\Product Management\Devices\EnterDeviceInformationSpoke.cs:line 359
+at QAutomate.CommonSteps.CaptureSteps.Capture_products_with_device_present_and_without_wo_and_without_so(PageDataList pageDataList) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.CommonSteps\CaptureSteps.cs:line 125
+at RegressionTestSuite_New.TestCases.CSR.i31764_008.Capture_two_products_both_with_smartcards() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\RegressionTestSuite_New\TestCases\CSR\Product Management\PPV&VOD\i31764_008_Change_PPV_device_with_different_FA_when_payment_is_required.cs:line 166
+at RegressionTestSuite_New.TestCases.CSR.i31764_008.i31764_008_Change_PPV_device_with_different_FA_when_payment_is_required() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\RegressionTestSuite_New\TestCases\CSR\Product Management\PPV&VOD\i31764_008_Change_PPV_device_with_different_FA_when_payment_is_required.cs:line 34
+]]></stack-trace>
+                            </failure>
+                          </test-case>
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="i31782_001" executed="True" result="Failure" success="False" time="76.253" asserts="0">
+                        <results>
+                          <test-case name="RegressionTestSuite_New.TestCases.CSR.i31782_001.I31782_001_Order_PPV_page_show_correct_tax_when_meet_must_have_exemption_code" executed="True" result="Error" success="False" time="76.252" asserts="0">
+                            <categories>
+                              <category name="CSRModule.ProductManagement.PPVandVOD" />
+                            </categories>
+                            <failure>
+                              <message><![CDATA[Oracle.DataAccess.Client.OracleException : ORA-12557: TNS:protocol adapter not loadable]]></message>
+                              <stack-trace><![CDATA[at Oracle.DataAccess.Client.OracleException.HandleErrorHelper(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, OpoSqlValCtx* pOpoSqlValCtx, Object src, String procedure, Boolean bCheck, Int32 isRecoverable)
+at Oracle.DataAccess.Client.OracleException.HandleError(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, Object src)
+at Oracle.DataAccess.Client.OracleConnection.Open()
+at QAutomate.Framework.Helpers.Config.Build_connection_string(String dns, String appModule) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\Config.cs:line 268
+at QAutomate.Framework.Helpers.Config.get_ConnectionString() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\Config.cs:line 81
+at QAutomate.Framework.Helpers.OracleDataAccess.Get_connection() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\OracleDataAccess.cs:line 70
+at QAutomate.Framework.Helpers.OracleDataAccess.ExecuteReader(String sql, HandleDataReader dataReaderHandler, List`1 parameters) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\OracleDataAccess.cs:line 54
+at QAutomate.Framework.Helpers.DeviceHelper.Get_stock_device_serial_number_by_model(String model, String stockHandler, String stockDescription) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\DeviceHelper.cs:line 382
+at QAutomate.Framework.Web.Pages.EnterDeviceInformationSpoke.Enter_serial_number_for_all_devices(String deviceFromStockHandler, String stockDescription) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Web\Pages\CSRModule\Product Management\Devices\EnterDeviceInformationSpoke.cs:line 146
+at QAutomate.Framework.Web.Pages.EnterDeviceInformationSpoke.Input_data(EnterDeviceInformationData data) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Web\Pages\CSRModule\Product Management\Devices\EnterDeviceInformationSpoke.cs:line 359
+at QAutomate.CommonSteps.CaptureSteps.Capture_products_with_device_present_and_without_wo(PageDataList pageDataList) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.CommonSteps\CaptureSteps.cs:line 248
+at RegressionTestSuite_New.TestCases.CSR.PPV_VODTestBase.Capture_TV_smartcard_with_device_present_without_wo() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\RegressionTestSuite_New\TestCases\CSR\Product Management\PPV&VOD\PPV_VODTestBase.cs:line 584
+at RegressionTestSuite_New.TestCases.CSR.i31782_001.I31782_001_Order_PPV_page_show_correct_tax_when_meet_must_have_exemption_code() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\RegressionTestSuite_New\TestCases\CSR\Product Management\PPV&VOD\i31782_001_Order_PPV_page_show_correct_tax_when_meet_must_have_exemption_code.cs:line 38
+]]></stack-trace>
+                            </failure>
+                          </test-case>
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="i31782_002" executed="True" result="Failure" success="False" time="62.925" asserts="0">
+                        <results>
+                          <test-case name="RegressionTestSuite_New.TestCases.CSR.i31782_002.i31782_002_Order_PPV_page_show_correct_tax_when_not_meet_must_have_exemption_code" executed="True" result="Error" success="False" time="62.923" asserts="0">
+                            <categories>
+                              <category name="CSRModule.ProductManagement.PPVandVOD" />
+                            </categories>
+                            <failure>
+                              <message><![CDATA[Oracle.DataAccess.Client.OracleException : ORA-12557: TNS:protocol adapter not loadable]]></message>
+                              <stack-trace><![CDATA[at Oracle.DataAccess.Client.OracleException.HandleErrorHelper(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, OpoSqlValCtx* pOpoSqlValCtx, Object src, String procedure, Boolean bCheck, Int32 isRecoverable)
+at Oracle.DataAccess.Client.OracleException.HandleError(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, Object src)
+at Oracle.DataAccess.Client.OracleConnection.Open()
+at QAutomate.Framework.Helpers.Config.Build_connection_string(String dns, String appModule) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\Config.cs:line 268
+at QAutomate.Framework.Helpers.Config.get_ConnectionString() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\Config.cs:line 81
+at QAutomate.Framework.Helpers.OracleDataAccess.Get_connection() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\OracleDataAccess.cs:line 70
+at QAutomate.Framework.Helpers.OracleDataAccess.ExecuteReader(String sql, HandleDataReader dataReaderHandler, List`1 parameters) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\OracleDataAccess.cs:line 54
+at QAutomate.Framework.Helpers.DeviceHelper.Get_stock_device_serial_number_by_model(String model, String stockHandler, String stockDescription) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\DeviceHelper.cs:line 382
+at QAutomate.Framework.Web.Pages.EnterDeviceInformationSpoke.Enter_serial_number_for_all_devices(String deviceFromStockHandler, String stockDescription) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Web\Pages\CSRModule\Product Management\Devices\EnterDeviceInformationSpoke.cs:line 146
+at QAutomate.Framework.Web.Pages.EnterDeviceInformationSpoke.Input_data(EnterDeviceInformationData data) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Web\Pages\CSRModule\Product Management\Devices\EnterDeviceInformationSpoke.cs:line 359
+at QAutomate.CommonSteps.CaptureSteps.Capture_products_with_device_present_and_without_wo(PageDataList pageDataList) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.CommonSteps\CaptureSteps.cs:line 248
+at RegressionTestSuite_New.TestCases.CSR.PPV_VODTestBase.Capture_TV_smartcard_with_device_present_without_wo() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\RegressionTestSuite_New\TestCases\CSR\Product Management\PPV&VOD\PPV_VODTestBase.cs:line 584
+at RegressionTestSuite_New.TestCases.CSR.i31782_002.i31782_002_Order_PPV_page_show_correct_tax_when_not_meet_must_have_exemption_code() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\RegressionTestSuite_New\TestCases\CSR\Product Management\PPV&VOD\i31782_002_Order_PPV_page_show_correct_tax_when_not_meet_must_have_exemption_code.cs:line 39
+]]></stack-trace>
+                            </failure>
+                          </test-case>
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="i31782_003" executed="True" result="Failure" success="False" time="63.768" asserts="0">
+                        <results>
+                          <test-case name="RegressionTestSuite_New.TestCases.CSR.i31782_003.i31782_003_Order_PPV_page_show_correct_tax_when_exemption_code_not_effective" executed="True" result="Error" success="False" time="63.766" asserts="0">
+                            <categories>
+                              <category name="CSRModule.ProductManagement.PPVandVOD" />
+                            </categories>
+                            <failure>
+                              <message><![CDATA[Oracle.DataAccess.Client.OracleException : ORA-12557: TNS:protocol adapter not loadable]]></message>
+                              <stack-trace><![CDATA[at Oracle.DataAccess.Client.OracleException.HandleErrorHelper(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, OpoSqlValCtx* pOpoSqlValCtx, Object src, String procedure, Boolean bCheck, Int32 isRecoverable)
+at Oracle.DataAccess.Client.OracleException.HandleError(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, Object src)
+at Oracle.DataAccess.Client.OracleConnection.Open()
+at QAutomate.Framework.Helpers.Config.Build_connection_string(String dns, String appModule) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\Config.cs:line 268
+at QAutomate.Framework.Helpers.Config.get_ConnectionString() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\Config.cs:line 81
+at QAutomate.Framework.Helpers.OracleDataAccess.Get_connection() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\OracleDataAccess.cs:line 70
+at QAutomate.Framework.Helpers.OracleDataAccess.ExecuteReader(String sql, HandleDataReader dataReaderHandler, List`1 parameters) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\OracleDataAccess.cs:line 54
+at QAutomate.Framework.Helpers.DeviceHelper.Get_stock_device_serial_number_by_model(String model, String stockHandler, String stockDescription) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\DeviceHelper.cs:line 382
+at QAutomate.Framework.Web.Pages.EnterDeviceInformationSpoke.Enter_serial_number_for_all_devices(String deviceFromStockHandler, String stockDescription) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Web\Pages\CSRModule\Product Management\Devices\EnterDeviceInformationSpoke.cs:line 146
+at QAutomate.Framework.Web.Pages.EnterDeviceInformationSpoke.Input_data(EnterDeviceInformationData data) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Web\Pages\CSRModule\Product Management\Devices\EnterDeviceInformationSpoke.cs:line 359
+at QAutomate.CommonSteps.CaptureSteps.Capture_products_with_device_present_and_without_wo(PageDataList pageDataList) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.CommonSteps\CaptureSteps.cs:line 248
+at RegressionTestSuite_New.TestCases.CSR.PPV_VODTestBase.Capture_TV_smartcard_with_device_present_without_wo() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\RegressionTestSuite_New\TestCases\CSR\Product Management\PPV&VOD\PPV_VODTestBase.cs:line 584
+at RegressionTestSuite_New.TestCases.CSR.i31782_003.i31782_003_Order_PPV_page_show_correct_tax_when_exemption_code_not_effective() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\RegressionTestSuite_New\TestCases\CSR\Product Management\PPV&VOD\i31782_003_Order_PPV_page_show_correct_tax_when_exemption_code_not_effective.cs:line 39
+]]></stack-trace>
+                            </failure>
+                          </test-case>
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="i31920_001" executed="True" result="Failure" success="False" time="55.177" asserts="0">
+                        <results>
+                          <test-case name="RegressionTestSuite_New.TestCases.CSR.i31920_001.i31920_001_PPV_price_is_shown_as_zero_in_OPPV" executed="True" result="Error" success="False" time="55.172" asserts="0">
+                            <categories>
+                              <category name="CSRModule.ProductManagement.PPVandVOD" />
+                            </categories>
+                            <failure>
+                              <message><![CDATA[Oracle.DataAccess.Client.OracleException : ORA-12557: TNS:protocol adapter not loadable]]></message>
+                              <stack-trace><![CDATA[at Oracle.DataAccess.Client.OracleException.HandleErrorHelper(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, OpoSqlValCtx* pOpoSqlValCtx, Object src, String procedure, Boolean bCheck, Int32 isRecoverable)
+at Oracle.DataAccess.Client.OracleException.HandleError(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, Object src)
+at Oracle.DataAccess.Client.OracleConnection.Open()
+at QAutomate.Framework.Helpers.Config.Build_connection_string(String dns, String appModule) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\Config.cs:line 268
+at QAutomate.Framework.Helpers.Config.get_ConnectionString() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\Config.cs:line 81
+at QAutomate.Framework.Helpers.OracleDataAccess.Get_connection() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\OracleDataAccess.cs:line 70
+at QAutomate.Framework.Helpers.OracleDataAccess.ExecuteReader(String sql, HandleDataReader dataReaderHandler, List`1 parameters) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\OracleDataAccess.cs:line 54
+at QAutomate.Framework.Helpers.DeviceHelper.Get_stock_device_serial_number_by_model(String model, String stockHandler, String stockDescription) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\DeviceHelper.cs:line 382
+at QAutomate.Framework.Web.Pages.EnterDeviceInformationSpoke.Enter_serial_number_for_all_devices(String deviceFromStockHandler, String stockDescription) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Web\Pages\CSRModule\Product Management\Devices\EnterDeviceInformationSpoke.cs:line 146
+at QAutomate.Framework.Web.Pages.EnterDeviceInformationSpoke.Input_data(EnterDeviceInformationData data) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Web\Pages\CSRModule\Product Management\Devices\EnterDeviceInformationSpoke.cs:line 359
+at QAutomate.CommonSteps.CaptureSteps.Capture_products_with_device_present_and_without_wo(PageDataList pageDataList) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.CommonSteps\CaptureSteps.cs:line 248
+at RegressionTestSuite_New.TestCases.CSR.PPV_VODTestBase.Capture_TV_Starter_Gold_with_device_present_without_wo() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\RegressionTestSuite_New\TestCases\CSR\Product Management\PPV&VOD\PPV_VODTestBase.cs:line 169
+at RegressionTestSuite_New.TestCases.CSR.i31920_001.i31920_001_PPV_price_is_shown_as_zero_in_OPPV() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\RegressionTestSuite_New\TestCases\CSR\Product Management\PPV&VOD\i31920_001_PPV_price_is_shown_as_0_in_OPPV.cs:line 27
+]]></stack-trace>
+                            </failure>
+                          </test-case>
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="i31920_002" executed="True" result="Failure" success="False" time="56.073" asserts="0">
+                        <results>
+                          <test-case name="RegressionTestSuite_New.TestCases.CSR.i31920_002.i31920_002_PPV_price_is_shown_as_zero_in_IPPV" executed="True" result="Error" success="False" time="56.072" asserts="0">
+                            <categories>
+                              <category name="CSRModule.ProductManagement.PPVandVOD" />
+                            </categories>
+                            <failure>
+                              <message><![CDATA[Oracle.DataAccess.Client.OracleException : ORA-12557: TNS:protocol adapter not loadable]]></message>
+                              <stack-trace><![CDATA[at Oracle.DataAccess.Client.OracleException.HandleErrorHelper(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, OpoSqlValCtx* pOpoSqlValCtx, Object src, String procedure, Boolean bCheck, Int32 isRecoverable)
+at Oracle.DataAccess.Client.OracleException.HandleError(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, Object src)
+at Oracle.DataAccess.Client.OracleConnection.Open()
+at QAutomate.Framework.Helpers.Config.Build_connection_string(String dns, String appModule) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\Config.cs:line 268
+at QAutomate.Framework.Helpers.Config.get_ConnectionString() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\Config.cs:line 81
+at QAutomate.Framework.Helpers.OracleDataAccess.Get_connection() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\OracleDataAccess.cs:line 70
+at QAutomate.Framework.Helpers.OracleDataAccess.ExecuteReader(String sql, HandleDataReader dataReaderHandler, List`1 parameters) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\OracleDataAccess.cs:line 54
+at QAutomate.Framework.Helpers.DeviceHelper.Get_stock_device_serial_number_by_model(String model, String stockHandler, String stockDescription) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\DeviceHelper.cs:line 382
+at QAutomate.Framework.Web.Pages.EnterDeviceInformationSpoke.Enter_serial_number_for_all_devices(String deviceFromStockHandler, String stockDescription) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Web\Pages\CSRModule\Product Management\Devices\EnterDeviceInformationSpoke.cs:line 146
+at QAutomate.Framework.Web.Pages.EnterDeviceInformationSpoke.Input_data(EnterDeviceInformationData data) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Web\Pages\CSRModule\Product Management\Devices\EnterDeviceInformationSpoke.cs:line 359
+at QAutomate.CommonSteps.CaptureSteps.Capture_products_with_device_present_and_without_wo(PageDataList pageDataList) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.CommonSteps\CaptureSteps.cs:line 248
+at RegressionTestSuite_New.TestCases.CSR.PPV_VODTestBase.Capture_TV_Starter_Gold_with_device_present_without_wo() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\RegressionTestSuite_New\TestCases\CSR\Product Management\PPV&VOD\PPV_VODTestBase.cs:line 169
+at RegressionTestSuite_New.TestCases.CSR.i31920_002.i31920_002_PPV_price_is_shown_as_zero_in_IPPV() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\RegressionTestSuite_New\TestCases\CSR\Product Management\PPV&VOD\i31920_002_PPV_price_is_shown_as_0_in_IPPV.cs:line 26
+]]></stack-trace>
+                            </failure>
+                          </test-case>
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="I33046_CE_Device_PPV" executed="True" result="Failure" success="False" time="365.545" asserts="0">
+                        <results>
+                          <test-case name="RegressionTestSuite_New.TestCases.CSR.I33046_CE_Device_PPV.I33046_028_Booking_a_PPV_for_CE_device_with_software" executed="True" result="Error" success="False" time="43.693" asserts="0">
+                            <categories>
+                              <category name="CSRModule.ProductManagement.CEDevice" />
+                            </categories>
+                            <failure>
+                              <message><![CDATA[Oracle.DataAccess.Client.OracleException : ORA-12557: TNS:protocol adapter not loadable]]></message>
+                              <stack-trace><![CDATA[at Oracle.DataAccess.Client.OracleException.HandleErrorHelper(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, OpoSqlValCtx* pOpoSqlValCtx, Object src, String procedure, Boolean bCheck, Int32 isRecoverable)
+at Oracle.DataAccess.Client.OracleException.HandleError(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, Object src)
+at Oracle.DataAccess.Client.OracleConnection.Open()
+at QAutomate.Framework.Helpers.Config.Build_connection_string(String dns, String appModule) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\Config.cs:line 268
+at QAutomate.Framework.Helpers.Config.get_ConnectionString() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\Config.cs:line 81
+at QAutomate.Framework.Helpers.OracleDataAccess.Get_connection() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\OracleDataAccess.cs:line 70
+at QAutomate.Framework.Helpers.OracleDataAccess.ExecuteScalar[T](String sql, List`1 parameters) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\OracleDataAccess.cs:line 14
+at QAutomate.Framework.Helpers.DeviceHelper.Has_existing(String column, Object val) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\DeviceHelper.cs:line 484
+at QAutomate.Framework.Helpers.DeviceHelper.Has_serial_number_existing(String serialNumber) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\DeviceHelper.cs:line 455
+at QAutomate.Framework.Helpers.DeviceHelper.Generate_valid_number[T](Func`1 generationExpression, Func`2 hasExisting) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\DeviceHelper.cs:line 218
+at QAutomate.Framework.Helpers.DeviceHelper.Generate_valid_serial_number_for_model_that_not_exists_in_system(String model, Int32 rangeIndex) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\DeviceHelper.cs:line 25
+at QAutomate.Framework.Web.Pages.RegisterCustomerEquipmentSpoke.Input_data(RegisterCustomerEquipmentData data) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Web\Pages\CSRModule\Product Management\Devices\RegisterCustomerEquipmentSpoke.cs:line 41
+at RegressionTestSuite_New.TestCases.CSR.I33046_CE_Device_PPV.Create_a_ce_device() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\RegressionTestSuite_New\TestCases\CSR\Product Management\PPV&VOD\I33046_CE_Device_PPV.cs:line 154
+at RegressionTestSuite_New.TestCases.CSR.I33046_CE_Device_PPV.I33046_028_Booking_a_PPV_for_CE_device_with_software() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\RegressionTestSuite_New\TestCases\CSR\Product Management\PPV&VOD\I33046_CE_Device_PPV.cs:line 26
+]]></stack-trace>
+                            </failure>
+                          </test-case>
+                          <test-case name="RegressionTestSuite_New.TestCases.CSR.I33046_CE_Device_PPV.I33046_039_Booking_a_PPV_for_CE_device_without_software" executed="True" result="Error" success="False" time="321.845" asserts="0">
+                            <categories>
+                              <category name="CSRModule.ProductManagement.CEDevice" />
+                            </categories>
+                            <failure>
+                              <message><![CDATA[System.Runtime.InteropServices.COMException : The RPC server is unavailable. (Exception from HRESULT: 0x800706BA)]]></message>
+                              <stack-trace><![CDATA[at mshtml.HTMLDocumentClass.IHTMLDocument2_get_url()
+at WatiN.Core.Native.InternetExplorer.IEDocument.get_Url()
+at WatiN.Core.Document.get_Url()
+at WatiN.Core.Element.get_NativeElement()
+at WatiN.Core.Element.GetAttributeValueImpl(String attributeName)
+at WatiN.Core.Component.GetAttributeValue(String attributeName)
+at WatiN.Core.Element.get_ClassName()
+at QAutomate.WebElement.get_ClassName() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate\WebElement.cs:line 79
+at QAutomate.Framework.Web.Pages.Controls.CSRHubControls.Expand_quick_search_bar() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Web\Pages\CSRModule\CSRHub\CSRHubControls.cs:line 1323
+at QAutomate.Framework.Web.Pages.Controls.CSRHubControls.get_QuickSearchCustomerNo() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Web\Pages\CSRModule\CSRHub\CSRHubControls.cs:line 1205
+at QAutomate.Framework.Web.Pages.CSRHub.CSRQuickSearchPanel.Search_by_customer_number(String customerNo) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Web\Pages\CSRModule\CSRHub\CSRQuickSearchPanel.cs:line 137
+at QAutomate.Framework.Web.Pages.CSRHub.Switch_to_customer(String id) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Web\Pages\CSRModule\CSRHub\CSRHub.cs:line 257
+at RegressionTestSuite_New.TestCases.MainTestBase.Capture_a_customer_with_fa_and_agreement() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\RegressionTestSuite_New\TestCases\MainTestBase.cs:line 40
+at RegressionTestSuite_New.TestCases.CSR.I33046_CE_Device_PPV.I33046_039_Booking_a_PPV_for_CE_device_without_software() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\RegressionTestSuite_New\TestCases\CSR\Product Management\PPV&VOD\I33046_CE_Device_PPV.cs:line 69
+]]></stack-trace>
+                            </failure>
+                          </test-case>
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="PPV_VOD" executed="True" result="Failure" success="False" time="2351.141" asserts="0">
+                        <results>
+                          <test-case name="RegressionTestSuite_New.TestCases.CSR.PPV_VOD.i22483_001_OPPV_sales_to_customers_with_specific_customer_status_FA_Status_which_are_met_configuration" executed="True" result="Error" success="False" time="63.967" asserts="0">
+                            <categories>
+                              <category name="CSRModule.ProductManagement.PPVandVOD" />
+                            </categories>
+                            <failure>
+                              <message><![CDATA[Oracle.DataAccess.Client.OracleException : ORA-12557: TNS:protocol adapter not loadable]]></message>
+                              <stack-trace><![CDATA[at Oracle.DataAccess.Client.OracleException.HandleErrorHelper(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, OpoSqlValCtx* pOpoSqlValCtx, Object src, String procedure, Boolean bCheck, Int32 isRecoverable)
+at Oracle.DataAccess.Client.OracleException.HandleError(Int32 errCode, OracleConnection conn, IntPtr opsErrCtx, Object src)
+at Oracle.DataAccess.Client.OracleConnection.Open()
+at QAutomate.Framework.Helpers.Config.Build_connection_string(String dns, String appModule) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\Config.cs:line 268
+at QAutomate.Framework.Helpers.Config.get_ConnectionString() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\Config.cs:line 81
+at QAutomate.Framework.Helpers.OracleDataAccess.Get_connection() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\OracleDataAccess.cs:line 70
+at QAutomate.Framework.Helpers.OracleDataAccess.ExecuteReader(String sql, HandleDataReader dataReaderHandler, List`1 parameters) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\OracleDataAccess.cs:line 54
+at QAutomate.Framework.Helpers.DeviceHelper.Get_stock_device_serial_number_by_model(String model, String stockHandler, String stockDescription) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Helpers\DeviceHelper.cs:line 382
+at QAutomate.Framework.Web.Pages.EnterDeviceInformationSpoke.Enter_serial_number_for_all_devices(String deviceFromStockHandler, String stockDescription) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Web\Pages\CSRModule\Product Management\Devices\EnterDeviceInformationSpoke.cs:line 146
+at QAutomate.Framework.Web.Pages.EnterDeviceInformationSpoke.Input_data(EnterDeviceInformationData data) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Web\Pages\CSRModule\Product Management\Devices\EnterDeviceInformationSpoke.cs:line 359
+at QAutomate.CommonSteps.CaptureSteps.Capture_products_with_device_present_and_without_wo(PageDataList pageDataList) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.CommonSteps\CaptureSteps.cs:line 248
+at RegressionTestSuite_New.TestCases.CSR.PPV_VOD.Capture_TV_Starter_Gold_with_device_present_without_wo() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\RegressionTestSuite_New\TestCases\CSR\Product Management\PPV&VOD\CSR_PRO_PPV_001_OrderPPVCheckFT.cs:line 106
+at RegressionTestSuite_New.TestCases.CSR.PPV_VOD.i22483_001_OPPV_sales_to_customers_with_specific_customer_status_FA_Status_which_are_met_configuration() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\RegressionTestSuite_New\TestCases\CSR\Product Management\PPV&VOD\i22483_001_OPPV_sales_to_customers_with_specific_customer_status_FA_Status_which_are_met_configuration.cs:line 30
+]]></stack-trace>
+                            </failure>
+                          </test-case>
+                          <test-case name="RegressionTestSuite_New.TestCases.CSR.PPV_VOD.i22483_002_OPPV_can_not_be_saled_to_customer_whose_customer_status_is_not_met_configuration_but_FA_status_is" executed="True" result="Error" success="False" time="321.344" asserts="0">
+                            <categories>
+                              <category name="CSRModule.ProductManagement.PPVandVOD" />
+                            </categories>
+                            <failure>
+                              <message><![CDATA[System.Runtime.InteropServices.COMException : The RPC server is unavailable. (Exception from HRESULT: 0x800706BA)]]></message>
+                              <stack-trace><![CDATA[at mshtml.HTMLDocumentClass.IHTMLDocument2_get_url()
+at WatiN.Core.Native.InternetExplorer.IEDocument.get_Url()
+at WatiN.Core.Document.get_Url()
+at WatiN.Core.Element.get_NativeElement()
+at WatiN.Core.Element.GetAttributeValueImpl(String attributeName)
+at WatiN.Core.Component.GetAttributeValue(String attributeName)
+at WatiN.Core.Element.get_ClassName()
+at QAutomate.WebElement.get_ClassName() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate\WebElement.cs:line 79
+at QAutomate.Framework.Web.Pages.Controls.CSRHubControls.Expand_quick_search_bar() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Web\Pages\CSRModule\CSRHub\CSRHubControls.cs:line 1323
+at QAutomate.Framework.Web.Pages.Controls.CSRHubControls.get_QuickSearchCustomerNo() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Web\Pages\CSRModule\CSRHub\CSRHubControls.cs:line 1205
+at QAutomate.Framework.Web.Pages.CSRHub.CSRQuickSearchPanel.Search_by_customer_number(String customerNo) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Web\Pages\CSRModule\CSRHub\CSRQuickSearchPanel.cs:line 137
+at QAutomate.Framework.Web.Pages.CSRHub.Switch_to_customer(String id) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Web\Pages\CSRModule\CSRHub\CSRHub.cs:line 257
+at RegressionTestSuite_New.TestCases.MainTestBase.Capture_a_customer_with_fa_and_agreement() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\RegressionTestSuite_New\TestCases\MainTestBase.cs:line 40
+at RegressionTestSuite_New.TestCases.CSR.PPV_VOD.i22483_002_OPPV_can_not_be_saled_to_customer_whose_customer_status_is_not_met_configuration_but_FA_status_is() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\RegressionTestSuite_New\TestCases\CSR\Product Management\PPV&VOD\i22483_002_OPPV_can_not_be_saled_to_customer_whose_customer_status_is_not_met_configuration_but_FA_status_is.cs:line 26
+]]></stack-trace>
+                            </failure>
+                          </test-case>
+                          <test-case name="RegressionTestSuite_New.TestCases.CSR.PPV_VOD.i22483_003_OPPV_can_not_be_saled_to_customer_whose_customer_status_is_met_configuration_but_FA_status_is_not" executed="True" result="Error" success="False" time="329.704" asserts="0">
+                            <categories>
+                              <category name="CSRModule.ProductManagement.PPVandVOD" />
+                            </categories>
+                            <failure>
+                              <message><![CDATA[System.Runtime.InteropServices.COMException : The RPC server is unavailable. (Exception from HRESULT: 0x800706BA)]]></message>
+                              <stack-trace><![CDATA[at mshtml.HTMLDocumentClass.IHTMLDocument2_get_url()
+at WatiN.Core.Native.InternetExplorer.IEDocument.get_Url()
+at WatiN.Core.Document.get_Url()
+at WatiN.Core.Element.get_NativeElement()
+at WatiN.Core.Element.GetAttributeValueImpl(String attributeName)
+at WatiN.Core.Component.GetAttributeValue(String attributeName)
+at WatiN.Core.Element.get_ClassName()
+at QAutomate.WebElement.get_ClassName() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate\WebElement.cs:line 79
+at QAutomate.Framework.Web.Pages.Controls.CSRHubControls.Expand_quick_search_bar() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Web\Pages\CSRModule\CSRHub\CSRHubControls.cs:line 1323
+at QAutomate.Framework.Web.Pages.Controls.CSRHubControls.get_QuickSearchCustomerNo() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Web\Pages\CSRModule\CSRHub\CSRHubControls.cs:line 1205
+at QAutomate.Framework.Web.Pages.CSRHub.CSRQuickSearchPanel.Search_by_customer_number(String customerNo) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Web\Pages\CSRModule\CSRHub\CSRQuickSearchPanel.cs:line 137
+at QAutomate.Framework.Web.Pages.CSRHub.Switch_to_customer(String id) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Web\Pages\CSRModule\CSRHub\CSRHub.cs:line 257
+at RegressionTestSuite_New.TestCases.MainTestBase.Capture_a_customer_with_fa_and_agreement() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\RegressionTestSuite_New\TestCases\MainTestBase.cs:line 40
+at RegressionTestSuite_New.TestCases.CSR.PPV_VOD.i22483_003_OPPV_can_not_be_saled_to_customer_whose_customer_status_is_met_configuration_but_FA_status_is_not() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\RegressionTestSuite_New\TestCases\CSR\Product Management\PPV&VOD\i22483_003_OPPV_can_not_be_saled_to_customer_whose_customer_status_is_met_configuration_but_FA_status_is_not.cs:line 26
+]]></stack-trace>
+                            </failure>
+                          </test-case>
+                          <test-case name="RegressionTestSuite_New.TestCases.CSR.PPV_VOD.i22483_004_OPPV_can_not_be_saled_to_customer_whose_customer_status_and_FA_status_are_not_met_configuration" executed="True" result="Error" success="False" time="322.159" asserts="0">
+                            <categories>
+                              <category name="CSRModule.ProductManagement.PPVandVOD" />
+                            </categories>
+                            <failure>
+                              <message><![CDATA[System.Runtime.InteropServices.COMException : The RPC server is unavailable. (Exception from HRESULT: 0x800706BA)]]></message>
+                              <stack-trace><![CDATA[at mshtml.HTMLDocumentClass.IHTMLDocument2_get_url()
+at WatiN.Core.Native.InternetExplorer.IEDocument.get_Url()
+at WatiN.Core.Document.get_Url()
+at WatiN.Core.Element.get_NativeElement()
+at WatiN.Core.Element.GetAttributeValueImpl(String attributeName)
+at WatiN.Core.Component.GetAttributeValue(String attributeName)
+at WatiN.Core.Element.get_ClassName()
+at QAutomate.WebElement.get_ClassName() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate\WebElement.cs:line 79
+at QAutomate.Framework.Web.Pages.Controls.CSRHubControls.Expand_quick_search_bar() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Web\Pages\CSRModule\CSRHub\CSRHubControls.cs:line 1323
+at QAutomate.Framework.Web.Pages.Controls.CSRHubControls.get_QuickSearchCustomerNo() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Web\Pages\CSRModule\CSRHub\CSRHubControls.cs:line 1205
+at QAutomate.Framework.Web.Pages.CSRHub.CSRQuickSearchPanel.Search_by_customer_number(String customerNo) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Web\Pages\CSRModule\CSRHub\CSRQuickSearchPanel.cs:line 137
+at QAutomate.Framework.Web.Pages.CSRHub.Switch_to_customer(String id) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Web\Pages\CSRModule\CSRHub\CSRHub.cs:line 257
+at RegressionTestSuite_New.TestCases.MainTestBase.Capture_a_customer_with_fa_and_agreement() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\RegressionTestSuite_New\TestCases\MainTestBase.cs:line 40
+at RegressionTestSuite_New.TestCases.CSR.PPV_VOD.i22483_004_OPPV_can_not_be_saled_to_customer_whose_customer_status_and_FA_status_are_not_met_configuration() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\RegressionTestSuite_New\TestCases\CSR\Product Management\PPV&VOD\i22483_004_OPPV_can_not_be_saled_to_customer_whose_customer_status_and_FA_status_are_not_met_configuration.cs:line 27
+]]></stack-trace>
+                            </failure>
+                          </test-case>
+                          <test-case name="RegressionTestSuite_New.TestCases.CSR.PPV_VOD.i22483_005_Ability_to_restrict_OPPV_sales_with_two_different_FA_one_is_met_configuration_another_is_not" executed="True" result="Error" success="False" time="330.178" asserts="0">
+                            <categories>
+                              <category name="CSRModule.ProductManagement.PPVandVOD" />
+                            </categories>
+                            <failure>
+                              <message><![CDATA[System.Runtime.InteropServices.COMException : The RPC server is unavailable. (Exception from HRESULT: 0x800706BA)]]></message>
+                              <stack-trace><![CDATA[at mshtml.HTMLDocumentClass.IHTMLDocument2_get_url()
+at WatiN.Core.Native.InternetExplorer.IEDocument.get_Url()
+at WatiN.Core.Document.get_Url()
+at WatiN.Core.Element.get_NativeElement()
+at WatiN.Core.Element.GetAttributeValueImpl(String attributeName)
+at WatiN.Core.Component.GetAttributeValue(String attributeName)
+at WatiN.Core.Element.get_ClassName()
+at QAutomate.WebElement.get_ClassName() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate\WebElement.cs:line 79
+at QAutomate.Framework.Web.Pages.Controls.CSRHubControls.Expand_quick_search_bar() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Web\Pages\CSRModule\CSRHub\CSRHubControls.cs:line 1323
+at QAutomate.Framework.Web.Pages.Controls.CSRHubControls.get_QuickSearchCustomerNo() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Web\Pages\CSRModule\CSRHub\CSRHubControls.cs:line 1205
+at QAutomate.Framework.Web.Pages.CSRHub.CSRQuickSearchPanel.Search_by_customer_number(String customerNo) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Web\Pages\CSRModule\CSRHub\CSRQuickSearchPanel.cs:line 137
+at QAutomate.Framework.Web.Pages.CSRHub.Switch_to_customer(String id) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Web\Pages\CSRModule\CSRHub\CSRHub.cs:line 257
+at RegressionTestSuite_New.TestCases.CSR.PPV_VOD.Switch_to_specified_customer() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\RegressionTestSuite_New\TestCases\CSR\Product Management\PPV&VOD\i22483_005_Ability_to_restrict_OPPV_sales_with_two_different_FA_one_is_met_configuration_another_is_not.cs:line 72
+at RegressionTestSuite_New.TestCases.CSR.PPV_VOD.i22483_005_Ability_to_restrict_OPPV_sales_with_two_different_FA_one_is_met_configuration_another_is_not() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\RegressionTestSuite_New\TestCases\CSR\Product Management\PPV&VOD\i22483_005_Ability_to_restrict_OPPV_sales_with_two_different_FA_one_is_met_configuration_another_is_not.cs:line 31
+]]></stack-trace>
+                            </failure>
+                          </test-case>
+                          <test-case name="RegressionTestSuite_New.TestCases.CSR.PPV_VOD.i22483_006_Ability_to_restrict_OPPV_sales_with_two_different_FA_one_is_met_configuration_another_is_not" executed="True" result="Error" success="False" time="327.363" asserts="0">
+                            <categories>
+                              <category name="CSRModule.ProductManagement.PPVandVOD" />
+                            </categories>
+                            <failure>
+                              <message><![CDATA[System.Runtime.InteropServices.COMException : The RPC server is unavailable. (Exception from HRESULT: 0x800706BA)]]></message>
+                              <stack-trace><![CDATA[at mshtml.HTMLDocumentClass.IHTMLDocument2_get_url()
+at WatiN.Core.Native.InternetExplorer.IEDocument.get_Url()
+at WatiN.Core.Document.get_Url()
+at WatiN.Core.Element.get_NativeElement()
+at WatiN.Core.Element.GetAttributeValueImpl(String attributeName)
+at WatiN.Core.Component.GetAttributeValue(String attributeName)
+at WatiN.Core.Element.get_ClassName()
+at QAutomate.WebElement.get_ClassName() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate\WebElement.cs:line 79
+at QAutomate.Framework.Web.Pages.Controls.CSRHubControls.Expand_quick_search_bar() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Web\Pages\CSRModule\CSRHub\CSRHubControls.cs:line 1323
+at QAutomate.Framework.Web.Pages.Controls.CSRHubControls.get_QuickSearchCustomerNo() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Web\Pages\CSRModule\CSRHub\CSRHubControls.cs:line 1205
+at QAutomate.Framework.Web.Pages.CSRHub.CSRQuickSearchPanel.Search_by_customer_number(String customerNo) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Web\Pages\CSRModule\CSRHub\CSRQuickSearchPanel.cs:line 137
+at QAutomate.Framework.Web.Pages.CSRHub.Switch_to_customer(String id) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Web\Pages\CSRModule\CSRHub\CSRHub.cs:line 257
+at RegressionTestSuite_New.TestCases.CSR.PPV_VOD.Switch_to_specified_customer() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\RegressionTestSuite_New\TestCases\CSR\Product Management\PPV&VOD\i22483_005_Ability_to_restrict_OPPV_sales_with_two_different_FA_one_is_met_configuration_another_is_not.cs:line 72
+at RegressionTestSuite_New.TestCases.CSR.PPV_VOD.i22483_006_Ability_to_restrict_OPPV_sales_with_two_different_FA_one_is_met_configuration_another_is_not() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\RegressionTestSuite_New\TestCases\CSR\Product Management\PPV&VOD\i22483_006_Ability_to_restrict_OPPV_sales_with_two_different_FA_one_is_met_configuration_another_is_not.cs:line 30
+]]></stack-trace>
+                            </failure>
+                          </test-case>
+                          <test-case name="RegressionTestSuite_New.TestCases.CSR.PPV_VOD.i22580_001_PPV_search_screen_not_working_properly" executed="True" result="Error" success="False" time="321.483" asserts="0">
+                            <categories>
+                              <category name="CSRModule.ProductManagement.PPVandVOD" />
+                            </categories>
+                            <failure>
+                              <message><![CDATA[System.Runtime.InteropServices.COMException : The RPC server is unavailable. (Exception from HRESULT: 0x800706BA)]]></message>
+                              <stack-trace><![CDATA[at mshtml.HTMLDocumentClass.IHTMLDocument2_get_url()
+at WatiN.Core.Native.InternetExplorer.IEDocument.get_Url()
+at WatiN.Core.Document.get_Url()
+at WatiN.Core.Element.get_NativeElement()
+at WatiN.Core.Element.GetAttributeValueImpl(String attributeName)
+at WatiN.Core.Component.GetAttributeValue(String attributeName)
+at WatiN.Core.Element.get_ClassName()
+at QAutomate.WebElement.get_ClassName() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate\WebElement.cs:line 79
+at QAutomate.Framework.Web.Pages.Controls.CSRHubControls.Expand_quick_search_bar() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Web\Pages\CSRModule\CSRHub\CSRHubControls.cs:line 1323
+at QAutomate.Framework.Web.Pages.Controls.CSRHubControls.get_QuickSearchCustomerNo() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Web\Pages\CSRModule\CSRHub\CSRHubControls.cs:line 1205
+at QAutomate.Framework.Web.Pages.CSRHub.CSRQuickSearchPanel.Search_by_customer_number(String customerNo) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Web\Pages\CSRModule\CSRHub\CSRQuickSearchPanel.cs:line 137
+at QAutomate.Framework.Web.Pages.CSRHub.Switch_to_customer(String id) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Web\Pages\CSRModule\CSRHub\CSRHub.cs:line 257
+at RegressionTestSuite_New.TestCases.MainTestBase.Capture_a_customer_with_fa_and_agreement() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\RegressionTestSuite_New\TestCases\MainTestBase.cs:line 40
+at RegressionTestSuite_New.TestCases.CSR.PPV_VOD.i22580_001_PPV_search_screen_not_working_properly() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\RegressionTestSuite_New\TestCases\CSR\Product Management\PPV&VOD\i22580_001_PPV_search_screen_not_working_properly.cs:line 24
+]]></stack-trace>
+                            </failure>
+                          </test-case>
+                          <test-case name="RegressionTestSuite_New.TestCases.CSR.PPV_VOD.i24241_001_IPPV_Slot_Req" executed="True" result="Error" success="False" time="334.854" asserts="0">
+                            <categories>
+                              <category name="CSRModule.ProductManagement.PPVandVOD" />
+                            </categories>
+                            <failure>
+                              <message><![CDATA[System.Runtime.InteropServices.COMException : The RPC server is unavailable. (Exception from HRESULT: 0x800706BA)]]></message>
+                              <stack-trace><![CDATA[at mshtml.HTMLDocumentClass.IHTMLDocument2_get_url()
+at WatiN.Core.Native.InternetExplorer.IEDocument.get_Url()
+at WatiN.Core.Document.get_Url()
+at WatiN.Core.Element.get_NativeElement()
+at WatiN.Core.Element.GetAttributeValueImpl(String attributeName)
+at WatiN.Core.Component.GetAttributeValue(String attributeName)
+at WatiN.Core.Element.get_ClassName()
+at QAutomate.WebElement.get_ClassName() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate\WebElement.cs:line 79
+at QAutomate.Framework.Web.Pages.Controls.CSRHubControls.Expand_quick_search_bar() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Web\Pages\CSRModule\CSRHub\CSRHubControls.cs:line 1323
+at QAutomate.Framework.Web.Pages.Controls.CSRHubControls.get_QuickSearchCustomerNo() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Web\Pages\CSRModule\CSRHub\CSRHubControls.cs:line 1205
+at QAutomate.Framework.Web.Pages.CSRHub.CSRQuickSearchPanel.Search_by_customer_number(String customerNo) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Web\Pages\CSRModule\CSRHub\CSRQuickSearchPanel.cs:line 137
+at QAutomate.Framework.Web.Pages.CSRHub.Switch_to_customer(String id) in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\QAutomate.Framework\Web\Pages\CSRModule\CSRHub\CSRHub.cs:line 257
+at RegressionTestSuite_New.TestCases.MainTestBase.Capture_a_customer_with_fa_and_agreement() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\RegressionTestSuite_New\TestCases\MainTestBase.cs:line 40
+at RegressionTestSuite_New.TestCases.CSR.PPV_VOD.i24241_001_IPPV_Slot_Req() in D:\tfs-w2k08\62_MR28_RC\62_MR28_SP2\QA\QAutomate\RegressionTestSuite_New\TestCases\CSR\Product Management\PPV&VOD\i24241_001_IPPV_Slot_Req.cs:line 23
+]]></stack-trace>
+                            </failure>
+                          </test-case>
+                        </results>
+                      </test-suite>
+                    </results>
+                  </test-suite>
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>

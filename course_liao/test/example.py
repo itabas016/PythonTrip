@@ -16,3 +16,7 @@ print(s.num)
 print(d)
 # print(d.__self__)
 # print(d.__self__.num)
+
+from datetime import datetime
+
+print(datetime.now().timestamp())
