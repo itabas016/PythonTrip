@@ -11,18 +11,6 @@ UTF8 = 'utf-8'
 COMMAND_EXIT = 'exit'
 
 
-s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-s.bind((HOST, PORT))
-s.listen(MAX_CONNECTION)
-print('Server process Id: %s' % os.getpid())
-
-
-while True:
-    print('Waiting for connection...')
-    sock, addr = s.accept()
-    t = threading.Thread(target=tcplink, args=(sock, addr))
-    t.start()
-
 def tcplink(sock, addr):
     print('Accept new connect from %s %s...' % (sock, addr))
     print('Server subprocess Id: %s' % os.getpid())
@@ -35,3 +23,14 @@ def tcplink(sock, addr):
         sock.send(('Hello, %s!' % data.decode(UTF8)).encode(UTF8))
     sock.close()
     print('Connection from %s:%s closed.' % addr)
+
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+s.bind((HOST, PORT))
+s.listen(MAX_CONNECTION)
+print('Server process Id: %s' % os.getpid())
+
+while True:
+    print('Waiting for connection...')
+    sock, addr = s.accept()
+    t = threading.Thread(target=tcplink, args=(sock, addr))
+    t.start()

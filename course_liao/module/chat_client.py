@@ -17,7 +17,7 @@ while True:
     print('Client process Id: %s' % os.getpid())
     print(c.recv(BUFFER_SIZE).decode(UTF8))
     # c.send((sys.argv).encode())
-    c.send(b'Hello server'.encode())
+    c.send('Hello server'.encode(UTF8))
     print(c.recv(BUFFER_SIZE).decode(UTF8))
     time.sleep(5)
 
